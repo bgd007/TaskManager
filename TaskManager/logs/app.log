@@ -3733,3 +3733,9 @@ java.net.SocketException: Connection reset
 2015-02-19 22:56:21,072 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Ok
 2015-02-19 22:56:21,072 INFO  [Thread-4] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Ok
 2015-02-19 22:56:31,049 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:56:11] to [2015.02.19 22:56:31]
+2015-02-19 22:56:51,049 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:56:31] to [2015.02.19 22:56:51]
+2015-02-19 22:57:11,050 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:56:51] to [2015.02.19 22:57:11]
+2015-02-19 22:57:31,052 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:57:11] to [2015.02.19 22:57:31]
+2015-02-19 22:57:51,053 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:57:31] to [2015.02.19 22:57:51]
+2015-02-19 22:58:11,053 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:57:51] to [2015.02.19 22:58:11]
+2015-02-19 22:58:31,055 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:58:11] to [2015.02.19 22:58:31]
