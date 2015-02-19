@@ -151,7 +151,7 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 	@Override
 	public void receiveSaveTaskOk() {
-		send(Packets.saveTaskOk);
+		send(Packets.SAVE_TASK_OK);
 	}
 
 	@Override

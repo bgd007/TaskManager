@@ -38,6 +38,8 @@ public class ClientTransport extends Transport implements Manager {
 	protected void dispatchEvent(Object event) {
 
 		log.info("dispatchEvent " + ((event != null) ? event : ""));
+		if (event == null)
+			return;
 
 		if (event instanceof Packets.SendTaskList) {
 			Packets.SendTaskList packet = (Packets.SendTaskList) event;
@@ -54,7 +56,7 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveTaskById(packet.task, packet.cardState);
 		}
 
-		if (event instanceof Packets.SaveTaskOk) {
+		if (event.equals(Packets.SAVE_TASK_OK)) {
 			subscriber.receiveSaveTaskOk();
 		}
 
@@ -88,8 +90,7 @@ public class ClientTransport extends Transport implements Manager {
 		Object res = receive();
 
 		if (!(res.equals(Packets.OK))) {
-			throw new RuntimeException("Unable to subscribe.",
-					(Throwable) res);
+			throw new RuntimeException("Unable to subscribe.", (Throwable) res);
 		}
 
 		this.subscriber = subscriber;
@@ -189,11 +190,11 @@ public class ClientTransport extends Transport implements Manager {
 
 	@Override
 	public void sendXML() {
-//		Packets.Register p = new Packets.Register("nick1");
-//		p.toXML();		
-//
-//		send(new Packets.DeleteTask(task));
-		
+		// Packets.Register p = new Packets.Register("nick1");
+		// p.toXML();
+		//
+		// send(new Packets.DeleteTask(task));
+
 	}
 
 }

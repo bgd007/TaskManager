@@ -31,13 +31,14 @@ public interface Packets {
 	/**
 	 * Client -> Server: registering event
 	 */
-	
-	public static final String OK="Ok";
-	public static final String GIVE_TASK_LIST="Give_task_list";
-	public static final String GET_NEW_TASK="Get_new_task";
-	
+
+	public static final String OK = "Ok";
+	public static final String GIVE_TASK_LIST = "Give_task_list";
+	public static final String GET_NEW_TASK = "Get_new_task";
+	public static final String SAVE_TASK_OK = "Save_task_Ok";
+
 	class Packet implements Serializable {
-		
+
 		org.w3c.dom.Document toXML() {
 			return null;
 		}
@@ -83,18 +84,18 @@ public interface Packets {
 		}
 	}
 
-//	/**
-//	 * Server -> Client: ok result
-//	 */
-//	class Ok implements Serializable {
-//	}
-//
-//	Ok OK = new Ok();
+	// /**
+	// * Server -> Client: ok result
+	// */
+	// class Ok implements Serializable {
+	// }
+	//
+	// Ok OK = new Ok();
 
-//	class GiveTaskList implements Serializable {
-//	}
-//
-//	GiveTaskList giveTaskList = new GiveTaskList();
+	// class GiveTaskList implements Serializable {
+	// }
+	//
+	// GiveTaskList giveTaskList = new GiveTaskList();
 
 	class SendTaskList implements Serializable {
 		TaskList taskList;
@@ -126,10 +127,10 @@ public interface Packets {
 
 	}
 
-//	class GetNewTask implements Serializable {
-//	}
-//
-//	GetNewTask getNewTask = new GetNewTask();
+	// class GetNewTask implements Serializable {
+	// }
+	//
+	// GetNewTask getNewTask = new GetNewTask();
 
 	class SendNewTask implements Serializable {
 		Task task;
@@ -165,10 +166,10 @@ public interface Packets {
 		}
 	}
 
-	class SaveTaskOk implements Serializable {
-	}
-
-	SaveTaskOk saveTaskOk = new SaveTaskOk();
+	// class SaveTaskOk implements Serializable {
+	// }
+	//
+	// SaveTaskOk saveTaskOk = new SaveTaskOk();
 
 	class DeleteTask implements Serializable {
 		Task task;
