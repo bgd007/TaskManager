@@ -26,6 +26,7 @@ import javax.swing.border.EmptyBorder;
 
 import ua.chernov.taskmanager.Task;
 
+
 public class TaskView extends GuiView implements ITaskView {
 	// Room.Subscriber subscriber;
 	// Room currentRoom;
@@ -65,8 +66,7 @@ public class TaskView extends GuiView implements ITaskView {
 			}
 		});
 
-		// super(); //super вызывает createframe, которы
-		// вызывает new
+		// super(); //super вызывает createframe, которы вызывает new
 		// JDialog(parentView.getFrame(), "Задача", true);,
 		// а parentView еще равно null
 
@@ -74,8 +74,7 @@ public class TaskView extends GuiView implements ITaskView {
 	}
 
 	protected void createFrame() {
-		// String title = (cardState == CardState.NOTIFY) ?
-		// "Оповещение"
+		// String title = (cardState == CardState.NOTIFY) ? "Оповещение"
 		// : "Задача";
 		frame = new JDialog(parentView.getFrame(), "Task", true);
 		// frame = new JFrame("Задача");
@@ -175,7 +174,7 @@ public class TaskView extends GuiView implements ITaskView {
 		JPanel panelActionButtonGrid = new JPanel();
 		panelActionButton.add(panelActionButtonGrid);
 
-		// panelActionButtonGrid.setLayout(new GridLayout(0, 2, 5, 0));
+		//panelActionButtonGrid.setLayout(new GridLayout(0, 2, 5, 0));
 
 		if ((cardState == CardState.EDIT) || (cardState == CardState.ADD)) {
 			panelActionButtonGrid.setLayout(new GridLayout(0, 2, 5, 0));
@@ -214,11 +213,7 @@ public class TaskView extends GuiView implements ITaskView {
 		String textNotifyDate = tfNotifyDate.getText();
 		if (!textNotifyDate.equals("")) {
 			SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
-			try {
-				NotifyDate = df.parse(tfNotifyDate.getText());
-			} catch (ParseException e) {
-				throw new ParseException("Unable to parse notify date.", e.getErrorOffset());
-			}
+			NotifyDate = df.parse(tfNotifyDate.getText());
 		}
 
 		if (cardState == CardState.ADD) {
@@ -288,8 +283,7 @@ public class TaskView extends GuiView implements ITaskView {
 
 	@Override
 	public void close() {
-		// frame.setVisible(false); //если оставить
-		// setVisible(false), то
+		// frame.setVisible(false); //если оставить setVisible(false), то
 		// зависает на dispose
 		frame.dispose();
 	}

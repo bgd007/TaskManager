@@ -2992,3 +2992,221 @@ java.net.SocketException: Socket closed
 	at ua.chernov.taskmanager.transport.ServerTransport.dispatchEvent(ServerTransport.java:111) [classes/:?]
 	at ua.chernov.taskmanager.transport.Transport$1.run(Transport.java:41) [classes/:?]
 2015-02-19 22:08:42,095 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:08:22] to [2015.02.19 22:08:42]
+2015-02-19 22:15:52,566 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:15:52,566 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:15:56,045 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:15:56,053 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40664
+2015-02-19 22:15:56,061 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-19 22:15:56,101 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 22:15:56,101 INFO  [main] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 22:15:56,101 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@7825114a
+2015-02-19 22:15:56,101 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:35) - Add subscriber. Subscribers.size=1
+2015-02-19 22:15:56,101 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 22:15:56,101 INFO  [main] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 22:15:56,505 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 22:15:56,505 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 22:15:56,505 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 22:15:56,505 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent Give_task_list
+2015-02-19 22:15:56,552 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 22:15:56,553 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@5b5d1579
+2015-02-19 22:15:56,554 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 22:15:56,556 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 22:15:56,557 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 22:15:57,798 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-19 22:15:58,565 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-19 22:15:58,565 ERROR [Thread-1] client.ClientExceptionHandler (ClientExceptionHandler.java:25) - UncaughtExceptionHandler error
+java.lang.NullPointerException
+	at ua.chernov.taskmanager.transport.ClientTransport.dispatchEvent(ClientTransport.java:57) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport$1.run(Transport.java:41) ~[classes/:?]
+2015-02-19 22:16:03,924 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
+2015-02-19 22:16:03,924 ERROR [Thread-3] server.Server$1 (Server.java:47) - Server side error.
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.peek(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.readObject0(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.readObject(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.transport.PacketTransporterObject.receive(PacketTransporterObject.java:38) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.receive(Transport.java:102) [classes/:?]
+	at ua.chernov.taskmanager.transport.Transport$1.run(Transport.java:41) [classes/:?]
+2015-02-19 22:16:03,950 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent 
+2015-02-19 22:16:03,951 ERROR [Thread-3] server.Server$1 (Server.java:47) - Server side error.
+java.net.SocketException: Socket closed
+	at java.net.SocketOutputStream.socketWrite(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketOutputStream.write(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectOutputStream$BlockDataOutputStream.drain(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectOutputStream$BlockDataOutputStream.flush(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectOutputStream.flush(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectOutputStream.close(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.transport.PacketTransporterObject.closeOutput(PacketTransporterObject.java:57) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.close(Transport.java:61) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.shutdown(Transport.java:74) [classes/:?]
+	at ua.chernov.taskmanager.transport.ServerTransport.shutdown(ServerTransport.java:47) [classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.reportError(Transport.java:127) [classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.send(Transport.java:91) [classes/:?]
+	at ua.chernov.taskmanager.transport.ServerTransport.dispatchEvent(ServerTransport.java:111) [classes/:?]
+	at ua.chernov.taskmanager.transport.Transport$1.run(Transport.java:41) [classes/:?]
+2015-02-19 22:16:03,952 ERROR [Thread-3] server.Server$1 (Server.java:47) - Server side error.
+java.net.SocketException: Socket closed
+	at java.net.SocketOutputStream.socketWrite(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketOutputStream.write(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectOutputStream$BlockDataOutputStream.drain(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectOutputStream$BlockDataOutputStream.setBlockDataMode(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectOutputStream.reset(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.transport.PacketTransporterObject.send(PacketTransporterObject.java:31) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.send(Transport.java:86) [classes/:?]
+	at ua.chernov.taskmanager.transport.ServerTransport.dispatchEvent(ServerTransport.java:111) [classes/:?]
+	at ua.chernov.taskmanager.transport.Transport$1.run(Transport.java:41) [classes/:?]
+2015-02-19 22:16:12,534 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:15:52] to [2015.02.19 22:16:12]
+2015-02-19 22:16:54,182 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:16:55,213 ERROR [main] client.ClientExceptionHandler (ClientExceptionHandler.java:25) - UncaughtExceptionHandler error
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.7.0_71]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.7.0_71]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.7.0_71]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.7.0_71]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.7.0_71]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.7.0_71]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.7.0_71]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.7.0_71]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.7.0_71]
+	at java.net.Socket.<init>(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.client.TaskController.main(TaskController.java:52) ~[classes/:?]
+2015-02-19 22:17:05,440 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:17:05,448 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:17:10,130 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:17:10,186 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40670
+2015-02-19 22:17:25,410 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:17:05] to [2015.02.19 22:17:25]
+2015-02-19 22:17:47,488 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:17:47,488 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:17:52,046 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:17:52,085 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40676
+2015-02-19 22:18:07,458 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:17:47] to [2015.02.19 22:18:07]
+2015-02-19 22:18:27,461 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:18:07] to [2015.02.19 22:18:27]
+2015-02-19 22:22:26,147 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:22:26,153 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:22:36,348 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:22:36,362 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40701
+2015-02-19 22:22:37,365 ERROR [main] client.ClientExceptionHandler (ClientExceptionHandler.java:25) - UncaughtExceptionHandler error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.readFully(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.readStreamHeader(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.<init>(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.transport.PacketTransporterObject.<init>(PacketTransporterObject.java:24) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.<init>(Transport.java:52) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.ClientTransport.<init>(ClientTransport.java:30) ~[classes/:?]
+	at ua.chernov.taskmanager.client.TaskController.main(TaskController.java:52) ~[classes/:?]
+2015-02-19 22:22:46,115 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:22:26] to [2015.02.19 22:22:46]
+2015-02-19 22:27:43,749 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:27:43,754 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:27:47,692 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:27:47,705 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40819
+2015-02-19 22:27:48,708 ERROR [main] client.ClientExceptionHandler (ClientExceptionHandler.java:25) - UncaughtExceptionHandler error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.readFully(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.readStreamHeader(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.<init>(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.transport.PacketTransporterObject.<init>(PacketTransporterObject.java:24) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.<init>(Transport.java:52) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.ClientTransport.<init>(ClientTransport.java:30) ~[classes/:?]
+	at ua.chernov.taskmanager.client.TaskController.main(TaskController.java:52) ~[classes/:?]
+2015-02-19 22:28:03,717 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:27:43] to [2015.02.19 22:28:03]
+2015-02-19 22:29:17,643 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:29:17,649 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:29:24,834 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:29:24,846 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40828
+2015-02-19 22:29:25,850 ERROR [main] client.ClientExceptionHandler (ClientExceptionHandler.java:25) - UncaughtExceptionHandler error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.readFully(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.readStreamHeader(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.<init>(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.transport.PacketTransporterObject.<init>(PacketTransporterObject.java:24) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.<init>(Transport.java:52) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.ClientTransport.<init>(ClientTransport.java:30) ~[classes/:?]
+	at ua.chernov.taskmanager.client.TaskController.main(TaskController.java:52) ~[classes/:?]
+2015-02-19 22:29:37,612 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:29:17] to [2015.02.19 22:29:37]
+2015-02-19 22:29:57,612 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:29:37] to [2015.02.19 22:29:57]
+2015-02-19 22:38:18,095 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:38:18,102 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:38:25,014 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:38:25,027 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40869
+2015-02-19 22:38:25,034 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-19 22:38:25,051 INFO  [main] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 22:38:25,068 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 22:38:25,069 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@109fd086
+2015-02-19 22:38:25,070 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:35) - Add subscriber. Subscribers.size=1
+2015-02-19 22:38:25,076 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-19 22:38:25,081 INFO  [main] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-19 22:38:25,495 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 22:38:25,500 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-19 22:38:25,503 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-19 22:38:25,504 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@44601ac7
+2015-02-19 22:38:25,515 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 22:38:25,516 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 22:38:25,521 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 22:38:25,522 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@4841a34
+2015-02-19 22:38:25,523 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 22:38:38,063 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:38:18] to [2015.02.19 22:38:38]
+2015-02-19 22:38:47,976 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
+2015-02-19 22:38:47,977 ERROR [Thread-3] server.Server$1 (Server.java:47) - Server side error.
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.net.SocketInputStream.read(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$PeekInputStream.peek(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.readObject0(Unknown Source) ~[?:1.7.0_71]
+	at java.io.ObjectInputStream.readObject(Unknown Source) ~[?:1.7.0_71]
+	at ua.chernov.taskmanager.transport.PacketTransporterObject.receive(PacketTransporterObject.java:38) ~[classes/:?]
+	at ua.chernov.taskmanager.transport.Transport.receive(Transport.java:102) [classes/:?]
+	at ua.chernov.taskmanager.transport.Transport$1.run(Transport.java:41) [classes/:?]
+2015-02-19 22:38:47,992 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent 
+2015-02-19 22:38:58,035 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 22:38:58,042 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 22:39:02,184 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 22:39:02,197 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:40875
+2015-02-19 22:39:02,204 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-19 22:39:02,221 INFO  [main] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 22:39:02,239 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 22:39:02,239 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@de5770f
+2015-02-19 22:39:02,239 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:35) - Add subscriber. Subscribers.size=1
+2015-02-19 22:39:02,246 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-19 22:39:02,251 INFO  [main] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-19 22:39:02,593 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 22:39:02,598 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-19 22:39:02,601 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-19 22:39:02,607 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@7fe2bed8
+2015-02-19 22:39:02,622 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 22:39:02,623 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 22:39:02,631 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 22:39:02,632 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@530192b7
+2015-02-19 22:39:02,632 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 22:39:03,990 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-19 22:39:04,634 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-19 22:39:04,636 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 22:39:04,637 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 22:39:04,638 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@1289d4de
+2015-02-19 22:39:04,638 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
+2015-02-19 22:39:04,639 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-19 22:39:04,639 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-19 22:39:18,036 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:38:58] to [2015.02.19 22:39:18]

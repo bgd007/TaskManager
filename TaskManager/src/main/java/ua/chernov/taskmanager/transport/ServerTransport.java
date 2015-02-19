@@ -65,11 +65,11 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 				send(Packets.OK);
 			}
 
-			if (event.equals(Packets.GIVE_TASK_LIST)) {
+			if (event instanceof Packets.GiveTaskList) {
 				room.giveTaskList(thisSubscriber);
 			}
 
-			if (event.equals(Packets.GET_NEW_TASK)) {
+			if (event instanceof Packets.GetNewTask) {
 				room.getNewTask(thisSubscriber);
 			}
 
@@ -151,12 +151,12 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 	@Override
 	public void receiveSaveTaskOk() {
-		send(Packets.SAVE_TASK_OK);
+		send(Packets.saveTaskOk);
 	}
 
 	@Override
 	public void receiveDeleteTaskOk() {
-		send(Packets.DELETE_TASK_OK);
+		send(Packets.deleteTaskOk);
 	}
 
 	@Override
@@ -167,7 +167,7 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 	@Override
 	public void receiveNotifyLaterOk() {
-		send(Packets.NOTIFY_LATER_OK);
+		send(Packets.NotifyLaterOk);
 	}
 
 	@Override

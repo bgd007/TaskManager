@@ -224,9 +224,7 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 					model.editTask(this, task);
 				}
 			} catch (ParseException e) {
-				JOptionPane.showMessageDialog(null,
-						e.getMessage(), "Warning",
-						JOptionPane.WARNING_MESSAGE);
+				ClientExceptionHandler.showException(e);
 			}
 		}
 

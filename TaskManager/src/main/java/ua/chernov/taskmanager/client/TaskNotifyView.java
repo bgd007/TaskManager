@@ -18,7 +18,6 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -124,7 +123,6 @@ public class TaskNotifyView extends GuiView implements ITaskNotifyView {
 		tfTitle = new JTextField();
 		panelContacts.add(tfTitle);
 		tfTitle.setColumns(20);
-		tfTitle.setEditable(false);
 
 		JPanel panelDescription = new JPanel();
 		panelData.add(panelDescription, BorderLayout.CENTER);
@@ -139,9 +137,7 @@ public class TaskNotifyView extends GuiView implements ITaskNotifyView {
 
 		taDescription = new JTextArea();
 		taDescription.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		taDescription.setEditable(false);
 		panelDescription.add(taDescription);
-		
 
 		JPanel panelActionButton = new JPanel();
 		contentPane.add(panelActionButton, BorderLayout.SOUTH);
@@ -251,15 +247,12 @@ public class TaskNotifyView extends GuiView implements ITaskNotifyView {
 		String textNotifyLaterDate = tfNotifyLater.getText();
 		if (!textNotifyLaterDate.equals("")) {
 			SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
-			try {
 			NotifyLaterDate = df.parse(textNotifyLaterDate);
-			}
-			catch (ParseException e){
-				throw new ParseException("Unable parse notify date", e.getErrorOffset());
-			}			
+			//task.setNotifyDate(NotifyLaterDate);
 		}
 		else {
-			throw new ParseException("Notify later date is empty.", 0);
+			
+			throw new RuntimeException("Введите дату в поле \"Отложить до\"");
 		}
 		
 		return NotifyLaterDate;

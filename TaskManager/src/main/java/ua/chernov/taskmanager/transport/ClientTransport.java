@@ -54,11 +54,11 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveTaskById(packet.task, packet.cardState);
 		}
 
-		if (event.equals(Packets.SAVE_TASK_OK)) {
+		if (event instanceof Packets.SaveTaskOk) {
 			subscriber.receiveSaveTaskOk();
 		}
 
-		if (event.equals(Packets.DELETE_TASK_OK)) {
+		if (event instanceof Packets.DeleteTaskOk) {
 			subscriber.receiveDeleteTaskOk();
 		}
 
@@ -67,7 +67,7 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveNotify(packet.task);
 		}
 
-		if (event.equals(Packets.NOTIFY_LATER_OK)) {
+		if (event instanceof Packets.NotifyLaterOk) {
 			subscriber.receiveNotifyLaterOk();
 		}
 
@@ -87,9 +87,8 @@ public class ClientTransport extends Transport implements Manager {
 
 		Object res = receive();
 
-//		if (!(res instanceof Packets.Ok)) {
-		if (!(res.equals(Packets.OK))) {
-			throw new RuntimeException("Unable to subscribe.",
+		if (!(res instanceof Packets.Ok)) {
+			throw new RuntimeException("Ошибка при регистрации",
 					(Throwable) res);
 		}
 
@@ -121,7 +120,7 @@ public class ClientTransport extends Transport implements Manager {
 
 	@Override
 	public void giveTaskList(Subscriber subscriber) {
-		send(Packets.GIVE_TASK_LIST);
+		send(Packets.giveTaskList);
 	}
 
 	@Override
@@ -180,7 +179,7 @@ public class ClientTransport extends Transport implements Manager {
 
 	@Override
 	public void getNewTask(Subscriber subscriber) {
-		send(Packets.GET_NEW_TASK);
+		send(new Packets.GetNewTask());
 	}
 
 	@Override

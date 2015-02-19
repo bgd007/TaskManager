@@ -32,7 +32,7 @@ public class ClientExceptionHandler implements Thread.UncaughtExceptionHandler {
 	static void showException(Thread t, Throwable e) {
 		String eType = e.getClass().getName();
 		String msg = eType + "\n" + e.getMessage();
-		JOptionPane.showMessageDialog(null, msg, "Error",
+		JOptionPane.showMessageDialog(null, msg, "Ошибка",
 				JOptionPane.ERROR_MESSAGE);
 	}
 

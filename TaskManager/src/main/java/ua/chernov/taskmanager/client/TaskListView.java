@@ -164,13 +164,13 @@ public class TaskListView extends GuiView implements ITaskListView {
 
 		frame.setSize(800, 600);
 
-		//frame.pack();
+		frame.pack();
 		frame.setLocationRelativeTo(null); // *** this will center your
 											// app ***
 
-		//Dimension dim = new Dimension((int) frame.getSize().getWidth(), 200);
+		Dimension dim = new Dimension((int) frame.getSize().getWidth(), 200);
 
-		//frame.setMinimumSize(dim);
+		frame.setMinimumSize(dim);
 
 		// frame.setVisible(true);
 	}

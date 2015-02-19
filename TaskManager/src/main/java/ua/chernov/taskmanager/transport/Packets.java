@@ -31,17 +31,8 @@ public interface Packets {
 	/**
 	 * Client -> Server: registering event
 	 */
-
-	public static final String OK = "Ok";
-	public static final String SAVE_TASK_OK = "Save_task_Ok";
-	public static final String DELETE_TASK_OK = "Delete_task_Ok";
-	public static final String NOTIFY_LATER_OK = "Notify_later_Ok";
-	public static final String GET_NEW_TASK = "Get_new_task";
-	public static final String GIVE_TASK_LIST = "Give_task_list";
-	
-
 	class Packet implements Serializable {
-
+		
 		org.w3c.dom.Document toXML() {
 			return null;
 		}
@@ -68,6 +59,9 @@ public interface Packets {
 						null, // qualifiedName
 						null); // doctype
 
+				// org.w3c.dom.Element root =
+				// doc.createElement(this.getClass().getName());
+				// String className = this.getClass().getName();
 				String className = Register.class.getSimpleName();
 				org.w3c.dom.Element root = doc.createElement(className);
 				doc.appendChild(root);
@@ -75,6 +69,21 @@ public interface Packets {
 				org.w3c.dom.Element nodeNick = doc.createElement("nick");
 				nodeNick.appendChild(doc.createTextNode(nick));
 				root.appendChild(nodeNick);
+
+				// e1.setNodeValue(nick);
+
+				// org.w3c.dom.Element e2 = doc.createElement("java");
+				// e2.setAttribute("url", "http://www.quizful.net");
+				// e1.appendChild(e2);
+
+				// output DOM XML to console
+				Transformer transformer = TransformerFactory.newInstance()
+						.newTransformer();
+				transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+				DOMSource source = new DOMSource(doc);
+				javax.xml.transform.stream.StreamResult console = new StreamResult(
+						System.out);
+				transformer.transform(source, console);
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -87,16 +96,15 @@ public interface Packets {
 	/**
 	 * Server -> Client: ok result
 	 */
+	class Ok implements Serializable {
+	}
 
-	// class Ok implements Serializable {
-	// }
-	//
-	// Ok OK = new Ok();
+	Ok OK = new Ok();
 
-//	class GiveTaskList implements Serializable {
-//	}
-//
-//	GiveTaskList giveTaskList = new GiveTaskList();
+	class GiveTaskList implements Serializable {
+	}
+
+	GiveTaskList giveTaskList = new GiveTaskList();
 
 	class SendTaskList implements Serializable {
 		TaskList taskList;
@@ -128,10 +136,10 @@ public interface Packets {
 
 	}
 
-//	class GetNewTask implements Serializable {
-//	}
-//
-//	GetNewTask getNewTask = new GetNewTask();
+	class GetNewTask implements Serializable {
+	}
+
+	GetNewTask getNewTask = new GetNewTask();
 
 	class SendNewTask implements Serializable {
 		Task task;
@@ -167,10 +175,10 @@ public interface Packets {
 		}
 	}
 
-	// class SaveTaskOk implements Serializable {
-	// }
-	//
-	// SaveTaskOk saveTaskOk = new SaveTaskOk();
+	class SaveTaskOk implements Serializable {
+	}
+
+	SaveTaskOk saveTaskOk = new SaveTaskOk();
 
 	class DeleteTask implements Serializable {
 		Task task;
@@ -180,10 +188,10 @@ public interface Packets {
 		}
 	}
 
-	// class DeleteTaskOk implements Serializable {
-	// }
-	//
-	// DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
+	class DeleteTaskOk implements Serializable {
+	}
+
+	DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
 
 	class Notify implements Serializable {
 		Task task;
@@ -203,10 +211,21 @@ public interface Packets {
 		}
 	}
 
-	// class NotifyLaterOk implements Serializable {
-	// }
+	class NotifyLaterOk implements Serializable {
+	}
+
+	NotifyLaterOk NotifyLaterOk = new NotifyLaterOk();
+
 	//
-	// NotifyLaterOk NotifyLaterOk = new NotifyLaterOk();
+	// class AddNotifyLater implements Serializable {
+	// Object taskId;
+	// Date notifyLaterDate;
+	//
+	// public AddNotifyLater(Object taskId, Date notifyLaterDate) {
+	// this.taskId = taskId;
+	// this.notifyLaterDate = notifyLaterDate;
+	// }
+	// }
 
 	/**
 	 * Server -> Client: some user joined event
@@ -233,5 +252,11 @@ public interface Packets {
 		public Part() {
 		}
 	}
-	
+
+	class XmlConverter {
+		public Object fromXML() {
+			return null;
+		}
+
+	}
 }
