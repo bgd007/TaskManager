@@ -3739,3 +3739,32 @@ java.net.SocketException: Connection reset
 2015-02-19 22:57:51,053 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:57:31] to [2015.02.19 22:57:51]
 2015-02-19 22:58:11,053 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:57:51] to [2015.02.19 22:58:11]
 2015-02-19 22:58:31,055 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 22:58:11] to [2015.02.19 22:58:31]
+2015-02-19 23:09:33,702 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 23:09:33,708 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 23:09:47,805 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 23:09:47,818 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:41000
+2015-02-19 23:09:47,826 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-19 23:09:47,843 INFO  [main] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:09:47,860 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:09:47,861 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@6c3315f0
+2015-02-19 23:09:47,861 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:35) - Add subscriber. Subscribers.size=1
+2015-02-19 23:09:47,863 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:09:47,868 INFO  [main] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:09:48,193 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 23:09:48,213 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-19 23:09:48,216 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-19 23:09:48,216 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@1e8de47d
+2015-02-19 23:09:48,225 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:09:48,226 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 23:09:48,238 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:09:48,239 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@7fb43f0f
+2015-02-19 23:09:48,240 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 23:09:53,668 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:09:33] to [2015.02.19 23:09:53]
+2015-02-19 23:09:54,000 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-19 23:09:54,243 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-19 23:09:54,250 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:09:54,251 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:09:54,253 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@65694ee6
+2015-02-19 23:09:54,254 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
+2015-02-19 23:09:54,255 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:09:54,256 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String

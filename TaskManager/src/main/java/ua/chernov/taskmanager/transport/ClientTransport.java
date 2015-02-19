@@ -87,8 +87,8 @@ public class ClientTransport extends Transport implements Manager {
 
 		Object res = receive();
 
-		if (!(res instanceof Packets.Ok)) {
-			throw new RuntimeException("Ошибка при регистрации",
+		if (!(res.equals(Packets.OK))) {
+			throw new RuntimeException("Unable to subscribe.",
 					(Throwable) res);
 		}
 

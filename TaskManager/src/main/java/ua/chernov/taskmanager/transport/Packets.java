@@ -31,6 +31,9 @@ public interface Packets {
 	/**
 	 * Client -> Server: registering event
 	 */
+	
+	public static final String OK="Ok";
+	
 	class Packet implements Serializable {
 		
 		org.w3c.dom.Document toXML() {
@@ -93,13 +96,13 @@ public interface Packets {
 		}
 	}
 
-	/**
-	 * Server -> Client: ok result
-	 */
-	class Ok implements Serializable {
-	}
-
-	Ok OK = new Ok();
+//	/**
+//	 * Server -> Client: ok result
+//	 */
+//	class Ok implements Serializable {
+//	}
+//
+//	Ok OK = new Ok();
 
 	class GiveTaskList implements Serializable {
 	}
