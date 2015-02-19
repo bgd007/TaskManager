@@ -3,7 +3,6 @@ package ua.chernov.taskmanager.impl;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.SortedMap;
-import java.util.logging.SimpleFormatter;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

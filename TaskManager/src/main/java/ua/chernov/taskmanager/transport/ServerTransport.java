@@ -1,12 +1,7 @@
 package ua.chernov.taskmanager.transport;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.annotation.XmlRootElement;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

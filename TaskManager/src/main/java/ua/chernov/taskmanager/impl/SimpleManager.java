@@ -11,7 +11,6 @@ import ua.chernov.taskmanager.Manager;
 import ua.chernov.taskmanager.Notifier;
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
-import ua.chernov.taskmanager.transport.Packets;
 
 
 public class SimpleManager implements Manager {

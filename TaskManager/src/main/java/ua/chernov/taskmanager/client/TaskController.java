@@ -21,7 +21,6 @@ import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
 import ua.chernov.taskmanager.client.ITaskView.CardState;
 import ua.chernov.taskmanager.transport.ClientTransport;
-import ua.chernov.taskmanager.transport.Packets;
 
 public class TaskController implements Manager.Subscriber, ActionListener {
 	private static final String DEFAULT_HOSTNAME = "localhost";

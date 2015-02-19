@@ -7,10 +7,6 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
 import java.net.Socket;
-import java.net.SocketTimeoutException;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class PacketTransporterObject implements PacketTransporter {
 	private ObjectInputStream input;

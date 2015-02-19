@@ -8,8 +8,6 @@ import javax.swing.JOptionPane;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import ua.chernov.taskmanager.server.Server;
-
 public class ClientExceptionHandler implements Thread.UncaughtExceptionHandler {
 	private static final Logger log = LogManager.getLogger(ClientExceptionHandler.class);
 	

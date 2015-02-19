@@ -1,16 +1,15 @@
 package ua.chernov.taskmanager.server;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import ua.chernov.taskmanager.Manager;
 import ua.chernov.taskmanager.impl.SimpleManager;
 import ua.chernov.taskmanager.transport.ServerTransport;
-
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 
 public class Server {
 	private static final int PORT = 1024;
