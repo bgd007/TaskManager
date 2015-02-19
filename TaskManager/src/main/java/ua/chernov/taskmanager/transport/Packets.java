@@ -33,6 +33,8 @@ public interface Packets {
 	 */
 	
 	public static final String OK="Ok";
+	public static final String GIVE_TASK_LIST="Give_task_list";
+	public static final String GET_NEW_TASK="Get_new_task";
 	
 	class Packet implements Serializable {
 		
@@ -73,21 +75,6 @@ public interface Packets {
 				nodeNick.appendChild(doc.createTextNode(nick));
 				root.appendChild(nodeNick);
 
-				// e1.setNodeValue(nick);
-
-				// org.w3c.dom.Element e2 = doc.createElement("java");
-				// e2.setAttribute("url", "http://www.quizful.net");
-				// e1.appendChild(e2);
-
-				// output DOM XML to console
-				Transformer transformer = TransformerFactory.newInstance()
-						.newTransformer();
-				transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-				DOMSource source = new DOMSource(doc);
-				javax.xml.transform.stream.StreamResult console = new StreamResult(
-						System.out);
-				transformer.transform(source, console);
-
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -104,10 +91,10 @@ public interface Packets {
 //
 //	Ok OK = new Ok();
 
-	class GiveTaskList implements Serializable {
-	}
-
-	GiveTaskList giveTaskList = new GiveTaskList();
+//	class GiveTaskList implements Serializable {
+//	}
+//
+//	GiveTaskList giveTaskList = new GiveTaskList();
 
 	class SendTaskList implements Serializable {
 		TaskList taskList;
@@ -139,10 +126,10 @@ public interface Packets {
 
 	}
 
-	class GetNewTask implements Serializable {
-	}
-
-	GetNewTask getNewTask = new GetNewTask();
+//	class GetNewTask implements Serializable {
+//	}
+//
+//	GetNewTask getNewTask = new GetNewTask();
 
 	class SendNewTask implements Serializable {
 		Task task;

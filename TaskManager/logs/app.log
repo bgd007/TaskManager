@@ -3768,3 +3768,124 @@ java.net.SocketException: Connection reset
 2015-02-19 23:09:54,254 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
 2015-02-19 23:09:54,255 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:103) - receive class java.lang.String
 2015-02-19 23:09:54,256 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:12:50,873 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 23:12:50,878 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 23:12:55,478 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 23:12:55,491 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:41023
+2015-02-19 23:12:55,498 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-19 23:12:55,514 INFO  [main] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:12:55,533 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:12:55,533 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@7b910b0
+2015-02-19 23:12:55,536 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:35) - Add subscriber. Subscribers.size=1
+2015-02-19 23:12:55,538 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:12:55,538 INFO  [main] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:12:55,904 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 23:12:55,904 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:12:55,906 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:12:55,906 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent Give_task_list
+2015-02-19 23:12:55,938 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:12:55,939 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 23:12:55,940 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:12:55,940 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@3f2a3527
+2015-02-19 23:12:55,941 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 23:13:01,118 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-19 23:13:01,944 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-19 23:13:01,951 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:13:01,954 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:13:01,955 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@24177336
+2015-02-19 23:13:01,956 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
+2015-02-19 23:13:01,958 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:13:01,958 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:13:10,839 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:12:50] to [2015.02.19 23:13:10]
+2015-02-19 23:13:30,841 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:13:10] to [2015.02.19 23:13:30]
+2015-02-19 23:13:50,842 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:13:30] to [2015.02.19 23:13:50]
+2015-02-19 23:14:10,844 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:13:50] to [2015.02.19 23:14:10]
+2015-02-19 23:14:30,846 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:14:10] to [2015.02.19 23:14:30]
+2015-02-19 23:14:50,847 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:14:30] to [2015.02.19 23:14:50]
+2015-02-19 23:14:52,763 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 23:14:52,776 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:41033
+2015-02-19 23:14:52,781 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-19 23:14:52,797 INFO  [main] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:14:52,797 INFO  [Thread-4] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:14:52,798 INFO  [Thread-4] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@24cfd139
+2015-02-19 23:14:52,798 INFO  [Thread-4] impl.SimpleManager (SimpleManager.java:35) - Add subscriber. Subscribers.size=1
+2015-02-19 23:14:52,798 INFO  [Thread-4] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:14:52,798 INFO  [main] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:14:53,124 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 23:14:53,124 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:14:53,125 INFO  [Thread-4] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:14:53,125 INFO  [Thread-4] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent Give_task_list
+2015-02-19 23:14:53,160 INFO  [Thread-4] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:14:53,160 INFO  [Thread-4] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 23:14:53,166 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:14:53,166 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@28a92d4a
+2015-02-19 23:14:53,167 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 23:14:55,474 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-19 23:14:56,171 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-19 23:14:56,178 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:14:56,179 INFO  [Thread-4] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:14:56,180 INFO  [Thread-4] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@604a550e
+2015-02-19 23:14:56,181 INFO  [Thread-4] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
+2015-02-19 23:14:56,182 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:14:56,182 INFO  [Thread-4] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:15:02,960 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 23:15:02,966 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 23:15:07,054 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 23:15:07,060 ERROR [main] server.Server (Server.java:33) - Couldn't create ServerSocket at port 1024
+2015-02-19 23:15:16,848 INFO  [main] server.Server (Server.java:65) - Shut Down Hook Attached.
+2015-02-19 23:15:16,854 INFO  [main] server.Server (Server.java:38) - Start listening...
+2015-02-19 23:15:20,818 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-19 23:15:20,831 INFO  [main] server.Server (Server.java:42) - Connection from /127.0.0.1:41034
+2015-02-19 23:15:20,838 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-19 23:15:20,856 INFO  [main] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:15:20,873 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-19 23:15:20,873 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@35b793ee
+2015-02-19 23:15:20,873 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:35) - Add subscriber. Subscribers.size=1
+2015-02-19 23:15:20,875 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:15:20,875 INFO  [main] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:15:21,207 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 23:15:21,208 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:15:21,216 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:15:21,216 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent Give_task_list
+2015-02-19 23:15:21,247 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:15:21,248 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 23:15:21,257 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:15:21,257 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@60745678
+2015-02-19 23:15:21,257 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 23:15:35,490 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed add
+2015-02-19 23:15:35,492 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:15:35,492 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:15:35,495 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent Get_new_task
+2015-02-19 23:15:35,653 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-19 23:15:35,654 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendNewTask@35117021
+2015-02-19 23:15:35,654 INFO  [Thread-1] client.TaskController (TaskController.java:87) - receiveNewTask
+2015-02-19 23:15:35,699 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-19 23:15:35,700 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:176) - send Packets.SendNewTask
+2015-02-19 23:15:36,817 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:15:16] to [2015.02.19 23:15:36]
+2015-02-19 23:15:40,266 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-19 23:15:40,277 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-19 23:15:40,280 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-19 23:15:40,281 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$AddTask@245df22c
+2015-02-19 23:15:40,291 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-19 23:15:40,292 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-19 23:15:40,294 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@42b5e6a1
+2015-02-19 23:15:40,295 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-19 23:15:40,296 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-19 23:15:40,309 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-19 23:15:40,310 INFO  [Thread-1] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:15:40,310 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:15:40,311 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent Give_task_list
+2015-02-19 23:15:40,315 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:15:40,315 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:123) - send Packets.SendTaskList
+2015-02-19 23:15:40,315 INFO  [Thread-1] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-19 23:15:40,316 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@531bc06a
+2015-02-19 23:15:40,319 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-19 23:15:47,386 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-19 23:15:48,320 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-19 23:15:48,327 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:88) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:15:48,329 INFO  [Thread-3] transport.Transport (Transport.java:103) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-19 23:15:48,330 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:56) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@43f19bbe
+2015-02-19 23:15:48,331 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:42) - Remove subscriber. Subscribers.size=0
+2015-02-19 23:15:48,332 INFO  [Thread-3] transport.Transport (Transport.java:88) - send class java.lang.String
+2015-02-19 23:15:48,332 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:103) - receive class java.lang.String
+2015-02-19 23:15:56,819 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:61) - dispatchNotifyLoop from [2015.02.19 23:15:36] to [2015.02.19 23:15:56]

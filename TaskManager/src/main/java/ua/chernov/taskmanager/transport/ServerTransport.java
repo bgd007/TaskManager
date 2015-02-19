@@ -65,11 +65,11 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 				send(Packets.OK);
 			}
 
-			if (event instanceof Packets.GiveTaskList) {
+			if (event.equals(Packets.GIVE_TASK_LIST)) {
 				room.giveTaskList(thisSubscriber);
 			}
 
-			if (event instanceof Packets.GetNewTask) {
+			if (event.equals(Packets.GET_NEW_TASK)) {
 				room.getNewTask(thisSubscriber);
 			}
 
