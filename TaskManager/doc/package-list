@@ -1,0 +1,5 @@
+ua.chernov.taskmanager
+ua.chernov.taskmanager.client
+ua.chernov.taskmanager.impl
+ua.chernov.taskmanager.server
+ua.chernov.taskmanager.transport

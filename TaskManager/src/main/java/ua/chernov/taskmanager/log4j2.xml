@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+		</Console>
+		<File name="AppFile" fileName="logs/app.log">
+			<PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<!-- <Logger name="ua.chernov.taskmanager" level="info" /> -->
+		<Root level="trace">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="AppFile" />
+		</Root>
+	</Loggers>
+</Configuration>
