@@ -36,6 +36,8 @@ public interface Packets {
 	public static final String GIVE_TASK_LIST = "Give_task_list";
 	public static final String GET_NEW_TASK = "Get_new_task";
 	public static final String SAVE_TASK_OK = "Save_task_Ok";
+	public static final String DELETE_TASK_OK = "Delete_task_Ok";
+	public static final String NOTIFY_LATER_OK = "Notify_later_Ok";
 
 	class Packet implements Serializable {
 
@@ -179,10 +181,10 @@ public interface Packets {
 		}
 	}
 
-	class DeleteTaskOk implements Serializable {
-	}
-
-	DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
+//	class DeleteTaskOk implements Serializable {
+//	}
+//
+//	DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
 
 	class Notify implements Serializable {
 		Task task;
@@ -202,21 +204,11 @@ public interface Packets {
 		}
 	}
 
-	class NotifyLaterOk implements Serializable {
-	}
+//	class NotifyLaterOk implements Serializable {
+//	}
+//
+//	NotifyLaterOk NotifyLaterOk = new NotifyLaterOk();
 
-	NotifyLaterOk NotifyLaterOk = new NotifyLaterOk();
-
-	//
-	// class AddNotifyLater implements Serializable {
-	// Object taskId;
-	// Date notifyLaterDate;
-	//
-	// public AddNotifyLater(Object taskId, Date notifyLaterDate) {
-	// this.taskId = taskId;
-	// this.notifyLaterDate = notifyLaterDate;
-	// }
-	// }
 
 	/**
 	 * Server -> Client: some user joined event
@@ -244,10 +236,5 @@ public interface Packets {
 		}
 	}
 
-	class XmlConverter {
-		public Object fromXML() {
-			return null;
-		}
-
-	}
+	
 }

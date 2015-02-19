@@ -60,7 +60,7 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveSaveTaskOk();
 		}
 
-		if (event instanceof Packets.DeleteTaskOk) {
+		if (event.equals(Packets.DELETE_TASK_OK)) {
 			subscriber.receiveDeleteTaskOk();
 		}
 
@@ -69,7 +69,7 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveNotify(packet.task);
 		}
 
-		if (event instanceof Packets.NotifyLaterOk) {
+		if (event.equals(Packets.NOTIFY_LATER_OK)) {
 			subscriber.receiveNotifyLaterOk();
 		}
 

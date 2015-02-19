@@ -57,6 +57,8 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 		Manager.Subscriber thisSubscriber = ServerTransport.this;
 
+		if (event == null) return; 
+			
 		try {
 			if (event instanceof Packets.Register) {
 				Register reg = (Register) event;
@@ -156,7 +158,7 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 	@Override
 	public void receiveDeleteTaskOk() {
-		send(Packets.deleteTaskOk);
+		send(Packets.DELETE_TASK_OK);
 	}
 
 	@Override
@@ -167,7 +169,7 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 	@Override
 	public void receiveNotifyLaterOk() {
-		send(Packets.NotifyLaterOk);
+		send(Packets.NOTIFY_LATER_OK);
 	}
 
 	@Override
