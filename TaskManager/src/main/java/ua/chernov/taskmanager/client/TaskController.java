@@ -88,10 +88,10 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 		createTaskView(task, CardState.ADD);
 	}
 
-//	@Override
-//	public void addTaskResponse(Object response) {
-//		// TODO Auto-generated method stub
-//	}
+	// @Override
+	// public void addTaskResponse(Object response) {
+	// // TODO Auto-generated method stub
+	// }
 
 	@Override
 	public void receiveSaveTaskOk() {
@@ -192,7 +192,6 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 						"Task is not defined", "Warning",
 						JOptionPane.WARNING_MESSAGE);
 				return;
-				// throw new RuntimeException("Нет выделеных задача.");
 			}
 
 			model.getTaskById(this, task.getId(), cardState);
@@ -224,7 +223,9 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 					model.editTask(this, task);
 				}
 			} catch (ParseException e) {
-				ClientExceptionHandler.showException(e);
+				JOptionPane.showMessageDialog(null, e.getMessage(), "Warning",
+						JOptionPane.WARNING_MESSAGE);
+				// ClientExceptionHandler.showException(e);
 			}
 		}
 
@@ -235,7 +236,7 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 				JOptionPane.showMessageDialog(viewTL.getFrame(),
 						"Task is not defined", "Warning",
 						JOptionPane.WARNING_MESSAGE);
-				return;				
+				return;
 			}
 
 			model.deleteTask(this, task);
@@ -259,10 +260,9 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 		}
 
 		if (event.getActionCommand().equals(ITaskListView.ACTION_SENDXML)) {
-//			model.
+			// model.
 		}
-		
+
 	}
-	
-	
+
 }

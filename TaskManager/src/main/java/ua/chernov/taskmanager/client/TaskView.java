@@ -74,10 +74,8 @@ public class TaskView extends GuiView implements ITaskView {
 	}
 
 	protected void createFrame() {
-		// String title = (cardState == CardState.NOTIFY) ? "Оповещение"
-		// : "Задача";
 		frame = new JDialog(parentView.getFrame(), "Task", true);
-		// frame = new JFrame("Задача");
+
 
 		// frame.addWindowListener(new WindowAdapter() {
 		// @Override
@@ -120,7 +118,7 @@ public class TaskView extends GuiView implements ITaskView {
 		panelNorth.add(panelTitle);
 		panelTitle.setLayout(null);
 
-		JLabel lbTitle = new JLabel("title");
+		JLabel lbTitle = new JLabel("Title");
 		lbTitle.setBounds(5, 8, 56, 16);
 		panelTitle.add(lbTitle);
 
@@ -213,7 +211,11 @@ public class TaskView extends GuiView implements ITaskView {
 		String textNotifyDate = tfNotifyDate.getText();
 		if (!textNotifyDate.equals("")) {
 			SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
+			try {
 			NotifyDate = df.parse(tfNotifyDate.getText());
+			} catch (ParseException e) {
+				throw new ParseException("Unable to parse notify date.", e.getErrorOffset());
+			}
 		}
 
 		if (cardState == CardState.ADD) {
@@ -283,8 +285,6 @@ public class TaskView extends GuiView implements ITaskView {
 
 	@Override
 	public void close() {
-		// frame.setVisible(false); //если оставить setVisible(false), то
-		// зависает на dispose
 		frame.dispose();
 	}
 

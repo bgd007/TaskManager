@@ -226,8 +226,6 @@ public class TaskNotifyView extends GuiView implements ITaskNotifyView {
 
 	@Override
 	public void close() {
-		// frame.setVisible(false); //если оставить setVisible(false), то
-		// зависает на dispose
 		frame.dispose();
 	}
 
@@ -247,12 +245,14 @@ public class TaskNotifyView extends GuiView implements ITaskNotifyView {
 		String textNotifyLaterDate = tfNotifyLater.getText();
 		if (!textNotifyLaterDate.equals("")) {
 			SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
+			try {
 			NotifyLaterDate = df.parse(textNotifyLaterDate);
-			//task.setNotifyDate(NotifyLaterDate);
+			} catch (ParseException e) {
+				throw new ParseException("Unable to parse notify later date.", e.getErrorOffset());
+			}
 		}
-		else {
-			
-			throw new RuntimeException("Введите дату в поле \"Отложить до\"");
+		else {			
+			throw new ParseException("Notify later date is empty.", 0);
 		}
 		
 		return NotifyLaterDate;
