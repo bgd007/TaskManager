@@ -1,6 +1,5 @@
 package ua.chernov.taskmanager.helper;
 
-
 import java.io.StringWriter;
 
 import javax.xml.transform.Transformer;
