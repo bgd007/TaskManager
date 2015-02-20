@@ -1,4 +1,4 @@
-package ua.chernov.taskmanager.transport;
+﻿package ua.chernov.taskmanager.transport;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -89,7 +89,8 @@ public class ClientTransport extends Transport implements Manager {
 
 		Object res = receive();
 
-		if (!(res.equals(Packets.OK))) {
+//		if (!(res.equals(Packets.OK))) {
+		if (!(res instanceof Packets.Ok)) {
 			throw new RuntimeException("Unable to subscribe.", (Throwable) res);
 		}
 

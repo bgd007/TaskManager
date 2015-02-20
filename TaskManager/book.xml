@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<book id="101">
-    <author>Mark Twain</author>
-    <bookType>
-        <type>typ1</type>
-    </bookType>
-    <cardState>ADD</cardState>
-    <name>Adventures of Huckleberry Finn</name>
-</book>

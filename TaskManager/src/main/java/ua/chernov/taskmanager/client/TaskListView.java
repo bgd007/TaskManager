@@ -1,4 +1,4 @@
-package ua.chernov.taskmanager.client;
+﻿package ua.chernov.taskmanager.client;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -15,6 +15,7 @@ import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -24,9 +25,21 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.DOMImplementation;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
+import ua.chernov.taskmanager.transport.Packets;
 
 public class TaskListView extends GuiView implements ITaskListView {
 
@@ -50,7 +63,6 @@ public class TaskListView extends GuiView implements ITaskListView {
 
 	protected void createFrame() {
 		frame = new JFrame("Task manager");
-
 
 		frame.setLayout(new BorderLayout());
 
@@ -96,7 +108,7 @@ public class TaskListView extends GuiView implements ITaskListView {
 		panelAction.setName("Panel");
 		panelAction.setBackground(Color.GRAY);
 
-		JPanel panelActionGrid = new JPanel(new GridLayout(1, 5, 5, 0));
+		JPanel panelActionGrid = new JPanel(new GridLayout(1, 6, 5, 0));
 		JButton btTest = new JButton("Test");
 		btTest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -143,7 +155,7 @@ public class TaskListView extends GuiView implements ITaskListView {
 			}
 		});
 
-		//panelActionGrid.add(btTest);
+		panelActionGrid.add(btTest);
 		panelActionGrid.add(btGetTaskList);
 		panelActionGrid.add(btAddTask);
 		panelActionGrid.add(btEditTask);
@@ -158,13 +170,13 @@ public class TaskListView extends GuiView implements ITaskListView {
 
 		frame.setSize(800, 600);
 
-		//frame.pack();
+		// frame.pack();
 		frame.setLocationRelativeTo(null); // *** this will center your
 											// app ***
 
-//		Dimension dim = new Dimension((int) frame.getSize().getWidth(), 200);
-//
-//		frame.setMinimumSize(dim);
+		// Dimension dim = new Dimension((int) frame.getSize().getWidth(), 200);
+		//
+		// frame.setMinimumSize(dim);
 
 		// frame.setVisible(true);
 	}
@@ -210,9 +222,46 @@ public class TaskListView extends GuiView implements ITaskListView {
 	}
 
 	public void btTestClick() {
-		fireAction(ACTION_SENDXML);
+		try {
+			 DocumentBuilderFactory factory
+	          = DocumentBuilderFactory.newInstance();
+	        DocumentBuilder builder = factory.newDocumentBuilder();
+	        DOMImplementation impl = builder.getDOMImplementation();
+
+	        Document doc = impl.createDocument(null,null,null);
+	        Element e1 = doc.createElement("howto");
+	        doc.appendChild(e1);
+
+	        Element e2 = doc.createElement("java");
+	        e1.appendChild(e2);
+
+	        e2.setAttribute("url","http://www.rgagnon.com/howto.html");
+
+
+	        // transform the Document into a String
+	        DOMSource domSource = new DOMSource(doc);
+	        TransformerFactory tf = TransformerFactory.newInstance();
+	        Transformer transformer = tf.newTransformer();
+	        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+	        transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+	        transformer.setOutputProperty(OutputKeys.ENCODING,"ISO-8859-1");
+	        transformer.setOutputProperty
+	            ("{http://xml.apache.org/xslt}indent-amount", "4");
+	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+	        java.io.StringWriter sw = new java.io.StringWriter();
+	        StreamResult sr = new StreamResult(sw);
+	        transformer.transform(domSource, sr);
+	        String xml = sw.toString();
+	        
+	        JOptionPane.showMessageDialog(null, xml);
+	        
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+
+		// fireAction(ACTION_SENDXML);
 		// new Packets.SendTaskById(task, cardState);
-		
+
 		// BookType bt = new BookType();
 		// bt.setType("typ1");
 		//

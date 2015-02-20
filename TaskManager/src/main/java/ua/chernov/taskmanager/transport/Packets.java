@@ -1,4 +1,4 @@
-package ua.chernov.taskmanager.transport;
+﻿package ua.chernov.taskmanager.transport;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,9 +7,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
+import ua.chernov.taskmanager.helper.XmlHelper;
 
 /**
  * Transport packets, sent using serialization.
@@ -25,17 +31,43 @@ public interface Packets {
 	 * Client -> Server: registering event
 	 */
 
-	public static final String OK = "Ok";
+	// public static final String OK = "Ok";
 	public static final String GIVE_TASK_LIST = "Give_task_list";
 	public static final String GET_NEW_TASK = "Get_new_task";
 	public static final String SAVE_TASK_OK = "Save_task_Ok";
 	public static final String DELETE_TASK_OK = "Delete_task_Ok";
 	public static final String NOTIFY_LATER_OK = "Notify_later_Ok";
 
-	class Packet implements Serializable {
+	abstract class Packet implements Serializable {
+		public Packet() {
+		}
 
-		org.w3c.dom.Document toXML() {
-			return null;
+		public Packet(org.w3c.dom.Document doc) {
+			if (doc == null)
+				throw new NullPointerException("Source xml document is null.");
+
+		}
+
+		abstract public org.w3c.dom.Document toXML()
+				throws ParserConfigurationException;
+
+		protected static org.w3c.dom.Element createPacketDocument(
+				String className) throws ParserConfigurationException {
+			org.w3c.dom.Document doc = null;
+
+			DocumentBuilderFactory factory = DocumentBuilderFactory
+					.newInstance();
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			org.w3c.dom.DOMImplementation impl = builder.getDOMImplementation();
+			doc = impl.createDocument(null, // namespaceURI
+					null, // qualifiedName
+					null); // doctype
+
+			// String className = Register.class.getSimpleName();
+			org.w3c.dom.Element root = doc.createElement(className);
+			doc.appendChild(root);
+
+			return root;
 		}
 
 	}
@@ -47,45 +79,50 @@ public interface Packets {
 			this.nick = nick;
 		}
 
+		public Register(org.w3c.dom.Document doc) throws Exception {
+			super(doc);
+
+			Node nodePacket = doc.getChildNodes().item(0);
+			Node nodeNick = nodePacket.getFirstChild();
+			String nodeValue = XmlHelper.getNodeValue(nodeNick);
+
+			this.nick = nodeValue;
+		}
+
 		@Override
-		public org.w3c.dom.Document toXML() {
-			org.w3c.dom.Document doc = null;
-			try {
-				DocumentBuilderFactory factory = DocumentBuilderFactory
-						.newInstance();
-				DocumentBuilder builder = factory.newDocumentBuilder();
-				org.w3c.dom.DOMImplementation impl = builder
-						.getDOMImplementation();
-				doc = impl.createDocument(null, // namespaceURI
-						null, // qualifiedName
-						null); // doctype
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			org.w3c.dom.Element root = createPacketDocument(Register.class
+					.getSimpleName());
+			org.w3c.dom.Document doc = root.getOwnerDocument();
 
-				// org.w3c.dom.Element root =
-				// doc.createElement(this.getClass().getName());
-				// String className = this.getClass().getName();
-				String className = Register.class.getSimpleName();
-				org.w3c.dom.Element root = doc.createElement(className);
-				doc.appendChild(root);
-
-				org.w3c.dom.Element nodeNick = doc.createElement("nick");
-				nodeNick.appendChild(doc.createTextNode(nick));
-				root.appendChild(nodeNick);
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			org.w3c.dom.Element nodeNick = doc.createElement("nick");
+			nodeNick.appendChild(doc.createTextNode(nick));
+			root.appendChild(nodeNick);
 
 			return doc;
 		}
+
 	}
 
-	// /**
-	// * Server -> Client: ok result
-	// */
-	// class Ok implements Serializable {
-	// }
-	//
-	// Ok OK = new Ok();
+	/**
+	 * Server -> Client: ok result
+	 */
+	class Ok extends Packet {
+		public Ok() {
+		}
+
+		public Ok(org.w3c.dom.Document doc) throws Exception {
+			super(doc);
+		}
+
+		@Override
+		public Document toXML() throws ParserConfigurationException {
+			Element root = createPacketDocument(Ok.class.getSimpleName());
+			return root.getOwnerDocument();
+		}
+	}
+
+	Ok OK = new Ok();
 
 	// class GiveTaskList implements Serializable {
 	// }
@@ -174,10 +211,10 @@ public interface Packets {
 		}
 	}
 
-//	class DeleteTaskOk implements Serializable {
-//	}
-//
-//	DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
+	// class DeleteTaskOk implements Serializable {
+	// }
+	//
+	// DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
 
 	class Notify implements Serializable {
 		Task task;
@@ -197,11 +234,10 @@ public interface Packets {
 		}
 	}
 
-//	class NotifyLaterOk implements Serializable {
-//	}
-//
-//	NotifyLaterOk NotifyLaterOk = new NotifyLaterOk();
-
+	// class NotifyLaterOk implements Serializable {
+	// }
+	//
+	// NotifyLaterOk NotifyLaterOk = new NotifyLaterOk();
 
 	/**
 	 * Server -> Client: some user joined event
@@ -229,5 +265,4 @@ public interface Packets {
 		}
 	}
 
-	
 }

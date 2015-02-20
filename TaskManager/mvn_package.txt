@@ -25,7 +25,7 @@
  T E S T S
 -------------------------------------------------------
 Running ua.chernov.taskmanager.AppTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 
 Results :
 
@@ -33,11 +33,10 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] 
 [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ TaskManager ---
-[INFO] Building jar: J:\java.course.dev\projects\TaskManager\TaskManager\target\TaskManager-1.0.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 4.872 s
-[INFO] Finished at: 2015-02-20T00:04:39+02:00
-[INFO] Final Memory: 10M/115M
+[INFO] Total time: 2.403 s
+[INFO] Finished at: 2015-02-20T08:12:27+02:00
+[INFO] Final Memory: 10M/219M
 [INFO] ------------------------------------------------------------------------

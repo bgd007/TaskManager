@@ -1,4 +1,4 @@
-package ua.chernov.taskmanager.transport;
+﻿package ua.chernov.taskmanager.transport;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -45,7 +45,8 @@ public abstract class Transport {
 //		output = new ObjectOutputStream(socket.getOutputStream());
 //		input = new ObjectInputStream(socket.getInputStream());
 		
-		packetTransporter = new PacketTransporterObject(socket);		
+		//packetTransporter = new PacketTransporterObject(socket);
+		packetTransporter = new PacketTransporterXML(socket);
 //		output = packetTransporter.getOutputStream();
 //		input = packetTransporter.getInputStream();
 	}
@@ -89,7 +90,6 @@ public abstract class Transport {
 	}
 
 	protected Object receive() {
-		// System.out.println("["+ft.format(new Date())+"] receive()");
 		try {
 			// this will check interruption flag each 1/2 second
 			while (!Thread.interrupted()) {
@@ -102,8 +102,6 @@ public abstract class Transport {
 					return inObject;
 				} catch (SocketTimeoutException e) {
 					// just to check interruption flag
-					// System.out.println("["+ft.format(new
-					// Date())+"] Thread.yield: ");
 					Thread.yield();
 				}
 			}

@@ -1,4 +1,4 @@
-package ua.chernov.taskmanager.transport;
+﻿package ua.chernov.taskmanager.transport;
 
 import java.io.IOException;
 import java.net.Socket;

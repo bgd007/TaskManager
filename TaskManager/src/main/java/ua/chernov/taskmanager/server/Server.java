@@ -1,4 +1,4 @@
-package ua.chernov.taskmanager.server;
+﻿package ua.chernov.taskmanager.server;
 
 import java.io.IOException;
 import java.net.ServerSocket;

@@ -1,4 +1,4 @@
-package ua.chernov.taskmanager.impl;
+﻿package ua.chernov.taskmanager.impl;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.UUID;
 
 import ua.chernov.taskmanager.Task;
-
+ 
 @SuppressWarnings("serial")
 public class ScheduledTask implements Task, Serializable, Cloneable {
 	private UUID id;
@@ -38,7 +38,7 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 	public void setTitle(String title) {
 		if ((title == null) || (title.equals("")))
 			throw new IllegalArgumentException(
-					"Название задачи не может быть пустым.");
+					"РќР°Р·РІР°РЅРёРµ Р·Р°РґР°С‡Рё РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј.");
 
 		this.title = title;
 	}
