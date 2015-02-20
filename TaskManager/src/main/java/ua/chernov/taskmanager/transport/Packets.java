@@ -2,6 +2,7 @@
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -16,6 +17,7 @@ import org.w3c.dom.NodeList;
 
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
+import ua.chernov.taskmanager.client.ITaskView;
 import ua.chernov.taskmanager.helper.XmlHelper;
 
 /**
@@ -177,6 +179,42 @@ public interface Packets {
 			this.id = id;
 			this.cardState = cardState;
 		}
+
+		public static GetTaskById fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			Node nodePacket = doc.getChildNodes().item(0);
+			Node nodeId = XmlHelper.getNode("id", nodePacket.getChildNodes());
+
+			String nodeValue = XmlHelper.getNodeValue(nodeId);
+			UUID id = UUID.fromString(nodeValue);
+
+			GetTaskById result = new GetTaskById(id, ITaskView.CardState.EDIT);
+			return result;
+		}
+
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = GetTaskById.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+
+			org.w3c.dom.Element nodeId = doc.createElement("id");
+			nodeId.appendChild(doc.createTextNode(id.toString()));
+			root.appendChild(nodeId);
+
+			org.w3c.dom.Element nodeCardState = doc.createElement("cardState");
+			nodeId.appendChild(doc.createTextNode(ITaskView.CardState
+					.token((ITaskView.CardState) cardState)));
+			root.appendChild(nodeCardState);
+
+			return doc;
+		}
+
+		private Document createPacketDocument(String rootName) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
 
 	// class SaveTaskOk implements Serializable {
@@ -226,7 +264,7 @@ public interface Packets {
 	class Join implements Serializable {
 		String nick;
 
-		public Join(String nick) { 
+		public Join(String nick) {
 			this.nick = nick;
 		}
 	}
