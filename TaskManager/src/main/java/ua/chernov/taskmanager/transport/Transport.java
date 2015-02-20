@@ -48,7 +48,7 @@ public abstract class Transport {
 		// output = new ObjectOutputStream(socket.getOutputStream());
 		// input = new ObjectInputStream(socket.getInputStream());
 
-		// packetTransporter = new PacketTransporterObject(socket);
+		//packetTransporter = new PacketTransporterObject(socket);
 		packetTransporter = new PacketTransporterXML(socket);
 		// output = packetTransporter.getOutputStream();
 		// input = packetTransporter.getInputStream();

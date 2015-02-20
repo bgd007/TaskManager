@@ -171,7 +171,7 @@ public interface Packets {
 		}
 	}
 
-	class GetTaskById implements Serializable {
+	class GetTaskById extends Packet {
 		Object id;
 		Object cardState;
 
@@ -204,17 +204,14 @@ public interface Packets {
 			root.appendChild(nodeId);
 
 			org.w3c.dom.Element nodeCardState = doc.createElement("cardState");
-			nodeId.appendChild(doc.createTextNode(ITaskView.CardState
-					.token((ITaskView.CardState) cardState)));
+			ITaskView.CardState state = (ITaskView.CardState) cardState;
+			String nodeValue = ITaskView.CardState.token(state);
+			nodeCardState.appendChild(doc.createTextNode(nodeValue));
 			root.appendChild(nodeCardState);
 
 			return doc;
 		}
 
-		private Document createPacketDocument(String rootName) {
-			// TODO Auto-generated method stub
-			return null;
-		}
 	}
 
 	// class SaveTaskOk implements Serializable {

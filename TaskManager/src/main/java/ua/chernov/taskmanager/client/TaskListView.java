@@ -221,45 +221,45 @@ public class TaskListView extends GuiView implements ITaskListView {
 		return task;
 	}
 
-	public void btTestClick() {
-		try {
-			 DocumentBuilderFactory factory
-	          = DocumentBuilderFactory.newInstance();
-	        DocumentBuilder builder = factory.newDocumentBuilder();
-	        DOMImplementation impl = builder.getDOMImplementation();
-
-	        Document doc = impl.createDocument(null,null,null);
-	        Element e1 = doc.createElement("howto");
-	        doc.appendChild(e1);
-
-	        Element e2 = doc.createElement("java");
-	        e1.appendChild(e2);
-
-	        e2.setAttribute("url","http://www.rgagnon.com/howto.html");
-
-
-	        // transform the Document into a String
-	        DOMSource domSource = new DOMSource(doc);
-	        TransformerFactory tf = TransformerFactory.newInstance();
-	        Transformer transformer = tf.newTransformer();
-	        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-	        transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-	        transformer.setOutputProperty(OutputKeys.ENCODING,"ISO-8859-1");
-	        transformer.setOutputProperty
-	            ("{http://xml.apache.org/xslt}indent-amount", "4");
-	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-	        java.io.StringWriter sw = new java.io.StringWriter();
-	        StreamResult sr = new StreamResult(sw);
-	        transformer.transform(domSource, sr);
-	        String xml = sw.toString();
-	        
-	        JOptionPane.showMessageDialog(null, xml);
-	        
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-
-		// fireAction(ACTION_SENDXML);
+	public void btTestClick() {		
+//		try {
+//			 DocumentBuilderFactory factory
+//	          = DocumentBuilderFactory.newInstance();
+//	        DocumentBuilder builder = factory.newDocumentBuilder();
+//	        DOMImplementation impl = builder.getDOMImplementation();
+//
+//	        Document doc = impl.createDocument(null,null,null);
+//	        Element e1 = doc.createElement("howto");
+//	        doc.appendChild(e1);
+//
+//	        Element e2 = doc.createElement("java");
+//	        e1.appendChild(e2);
+//
+//	        e2.setAttribute("url","http://www.rgagnon.com/howto.html");
+//
+//
+//	        // transform the Document into a String
+//	        DOMSource domSource = new DOMSource(doc);
+//	        TransformerFactory tf = TransformerFactory.newInstance();
+//	        Transformer transformer = tf.newTransformer();
+//	        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+//	        transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+//	        transformer.setOutputProperty(OutputKeys.ENCODING,"ISO-8859-1");
+//	        transformer.setOutputProperty
+//	            ("{http://xml.apache.org/xslt}indent-amount", "4");
+//	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+//	        java.io.StringWriter sw = new java.io.StringWriter();
+//	        StreamResult sr = new StreamResult(sw);
+//	        transformer.transform(domSource, sr);
+//	        String xml = sw.toString();
+//	        
+//	        JOptionPane.showMessageDialog(null, xml);
+//	        
+//		} catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
+//
+		fireAction(ACTION_SENDXML);
 		// new Packets.SendTaskById(task, cardState);
 
 		// BookType bt = new BookType();

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 
 import javax.swing.JOptionPane;
 
@@ -259,7 +260,9 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 		}
 
 		if (event.getActionCommand().equals(ITaskListView.ACTION_SENDXML)) {
-			// model.
+			UUID id = UUID.fromString("fafe7b74-c1fa-4ac3-96b3-acd745e6b71d");
+
+			model.getTaskById(this, id, CardState.EDIT);
 		}
 
 	}
