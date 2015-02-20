@@ -12,6 +12,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
@@ -39,19 +40,10 @@ public interface Packets {
 	public static final String NOTIFY_LATER_OK = "Notify_later_Ok";
 
 	abstract class Packet implements Serializable {
-		public Packet() {
-		}
+		// public Packet() {
+		// }
 
-		public Packet(org.w3c.dom.Document doc) {
-			if (doc == null)
-				throw new NullPointerException("Source xml document is null.");
-
-		}
-
-		abstract public org.w3c.dom.Document toXML()
-				throws ParserConfigurationException;
-
-		protected static org.w3c.dom.Element createPacketDocument(
+		protected static org.w3c.dom.Document createPacketDocument(
 				String className) throws ParserConfigurationException {
 			org.w3c.dom.Document doc = null;
 
@@ -63,11 +55,10 @@ public interface Packets {
 					null, // qualifiedName
 					null); // doctype
 
-			// String className = Register.class.getSimpleName();
 			org.w3c.dom.Element root = doc.createElement(className);
 			doc.appendChild(root);
 
-			return root;
+			return doc;
 		}
 
 	}
@@ -79,21 +70,23 @@ public interface Packets {
 			this.nick = nick;
 		}
 
-		public Register(org.w3c.dom.Document doc) throws Exception {
-			super(doc);
+		public static Register fromXML(org.w3c.dom.Document doc)
+				throws Exception {
 
 			Node nodePacket = doc.getChildNodes().item(0);
 			Node nodeNick = nodePacket.getFirstChild();
 			String nodeValue = XmlHelper.getNodeValue(nodeNick);
 
-			this.nick = nodeValue;
+			Register result = new Register(nodeValue);
+			return result;
 		}
 
-		@Override
 		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
-			org.w3c.dom.Element root = createPacketDocument(Register.class
-					.getSimpleName());
-			org.w3c.dom.Document doc = root.getOwnerDocument();
+			String rootName = Register.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
 
 			org.w3c.dom.Element nodeNick = doc.createElement("nick");
 			nodeNick.appendChild(doc.createTextNode(nick));
@@ -108,18 +101,6 @@ public interface Packets {
 	 * Server -> Client: ok result
 	 */
 	class Ok extends Packet {
-		public Ok() {
-		}
-
-		public Ok(org.w3c.dom.Document doc) throws Exception {
-			super(doc);
-		}
-
-		@Override
-		public Document toXML() throws ParserConfigurationException {
-			Element root = createPacketDocument(Ok.class.getSimpleName());
-			return root.getOwnerDocument();
-		}
 	}
 
 	Ok OK = new Ok();
@@ -254,15 +235,7 @@ public interface Packets {
 	 * Server -> Client: some user parted event Client -> Server: current user
 	 * parted
 	 */
-	class Part implements Serializable {
-		String nick;
-
-		public Part(String nick) {
-			this.nick = nick;
-		}
-
-		public Part() {
-		}
+	class Part extends Packet {
 	}
 
 }

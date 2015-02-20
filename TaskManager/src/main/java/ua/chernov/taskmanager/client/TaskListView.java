@@ -186,7 +186,7 @@ public class TaskListView extends GuiView implements ITaskListView {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				frame.setVisible(true);
-				fireListAction();
+//				fireListAction();
 			}
 		});
 	}

@@ -5,25 +5,28 @@ import java.io.Serializable;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.xml.sax.SAXException;
 
 /**
  * Abstract transport with event loop and serialized packets.
  */
 public abstract class Transport {
 	private Socket socket;
-//	private ObjectInputStream input;
-//	private ObjectOutputStream output;
-	
-//	private InputStream input;
-//	private OutputStream output;
-	
+	// private ObjectInputStream input;
+	// private ObjectOutputStream output;
+
+	// private InputStream input;
+	// private OutputStream output;
+
 	private IOException ioError;
 
 	private static final Logger log = LogManager.getLogger(Transport.class);
 	private PacketTransporter packetTransporter;
-	
+
 	// SimpleDateFormat ft = new SimpleDateFormat("mm:ss:SSS");
 
 	/**
@@ -42,23 +45,23 @@ public abstract class Transport {
 		this.socket = socket;
 		// so reading will interrupt each 1/2 second
 		socket.setSoTimeout(1000);
-//		output = new ObjectOutputStream(socket.getOutputStream());
-//		input = new ObjectInputStream(socket.getInputStream());
-		
-		//packetTransporter = new PacketTransporterObject(socket);
+		// output = new ObjectOutputStream(socket.getOutputStream());
+		// input = new ObjectInputStream(socket.getInputStream());
+
+		// packetTransporter = new PacketTransporterObject(socket);
 		packetTransporter = new PacketTransporterXML(socket);
-//		output = packetTransporter.getOutputStream();
-//		input = packetTransporter.getInputStream();
+		// output = packetTransporter.getOutputStream();
+		// input = packetTransporter.getInputStream();
 	}
 
 	public void close() throws IOException {
 		stopEventLoop();
 		try {
-			//output.close();
+			// output.close();
 			packetTransporter.closeOutput();
 		} finally {
 			try {
-				//input.close();
+				// input.close();
 				packetTransporter.closeInput();
 			} finally {
 				socket.close();
@@ -76,10 +79,10 @@ public abstract class Transport {
 
 	protected void send(Serializable obj) {
 		try {
-//			output.reset();
-//			output.writeObject(obj);
-//			output.flush();
-			
+			// output.reset();
+			// output.writeObject(obj);
+			// output.flush();
+
 			packetTransporter.send(obj);
 
 			log.info("send " + ((obj != null) ? obj.getClass() : "null"));
@@ -94,7 +97,9 @@ public abstract class Transport {
 			// this will check interruption flag each 1/2 second
 			while (!Thread.interrupted()) {
 				try {
-//					Object inObject = input.readObject();
+					// Object inObject = input.readObject();
+//					log.info("receive before process by packetTransporter.receive()");
+
 					Object inObject = packetTransporter.receive();
 					log.info("receive "
 							+ ((inObject != null) ? inObject.getClass() : null));
@@ -108,9 +113,10 @@ public abstract class Transport {
 			// reset interruption flag
 			Thread.currentThread().interrupt();
 			return null;
-		} catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException | RuntimeException e) {
 			// should not happen
 			throw new RuntimeException(e);
+			// } catch (Exception|IOException e) {
 		} catch (IOException e) {
 			reportError(e);
 			return null;
