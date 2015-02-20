@@ -226,7 +226,7 @@ public interface Packets {
 	class Join implements Serializable {
 		String nick;
 
-		public Join(String nick) {
+		public Join(String nick) { 
 			this.nick = nick;
 		}
 	}
