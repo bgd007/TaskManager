@@ -28,7 +28,7 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 		this.id = id;
 	}
 
-	public ScheduledTask(String title) {
+	public ScheduledTask(String title) throws Exception {
 		this();
 		setTitle(title);
 	}
@@ -44,9 +44,9 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 	}
 
 	@Override
-	public void setTitle(String title) {
+	public void setTitle(String title) throws Exception {
 		if ((title == null) || (title.equals("")))
-			throw new IllegalArgumentException("Title must be not empty.");
+			throw new Exception("Title must be not empty.");
 
 		this.title = title;
 	}
@@ -88,9 +88,10 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 
 		StringBuffer str = new StringBuffer("title="
 				+ ((title != null) ? title : ""));
-		str.append("description=" + ((description != null) ? description : ""));
-		str.append("contacts=" + ((contacts != null) ? contacts : ""));
-		str.append("notifyDate=[" + textNotifyDate + "]");
+		str.append(" description=" + ((description != null) ? description : ""));
+		str.append(" contacts=" + ((contacts != null) ? contacts : ""));
+		str.append(" notifyDate=[" + textNotifyDate + "]");
+		str.append(" id=" + ((id != null) ? id.toString() : ""));
 
 		return str.toString();
 	}
@@ -120,15 +121,17 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 		nodeTask.setAttribute("id", id.toString());
 
 		Element nodeTitle = doc.createElement("title");
-		nodeTitle.appendChild(doc.createTextNode(title));
+		nodeTitle.appendChild(doc.createTextNode((title != null) ? title : ""));
 		nodeTask.appendChild(nodeTitle);
 
 		Element nodeDescription = doc.createElement("description");
-		nodeDescription.appendChild(doc.createTextNode(description));
+		nodeDescription.appendChild(doc
+				.createTextNode((description != null) ? description : ""));
 		nodeTask.appendChild(nodeDescription);
 
 		Element nodeContacts = doc.createElement("contacts");
-		nodeContacts.appendChild(doc.createTextNode(contacts));
+		nodeContacts.appendChild(doc
+				.createTextNode((contacts != null) ? contacts : ""));
 		nodeTask.appendChild(nodeContacts);
 
 		String textNotifyDate = (notifyDate != null) ? DateHelper
@@ -159,13 +162,12 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 		}
 
 		ScheduledTask result = new ScheduledTask(id);
-		result.setTitle(title);
+		result.title = title;
 		result.setDescription(description);
 		result.setContacts(contacts);
 		result.setNotifyDate(notifyDate);
 
 		return result;
 	}
-
 
 }

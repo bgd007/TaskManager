@@ -56,11 +56,11 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveTaskById(packet.task, packet.cardState);
 		}
 
-		if (event.equals(Packets.SAVE_TASK_OK)) {
+		if (event instanceof Packets.SaveTaskOk) {
 			subscriber.receiveSaveTaskOk();
 		}
 
-		if (event.equals(Packets.DELETE_TASK_OK)) {
+		if (event instanceof Packets.DeleteTaskOk) {
 			subscriber.receiveDeleteTaskOk();
 		}
 
@@ -181,7 +181,7 @@ public class ClientTransport extends Transport implements Manager {
 
 	@Override
 	public void getNewTask(Subscriber subscriber) {
-		send(Packets.GET_NEW_TASK);
+		send(Packets.getNewTask);
 	}
 
 	@Override

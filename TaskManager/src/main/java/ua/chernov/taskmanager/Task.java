@@ -11,7 +11,7 @@ public interface Task extends Marshallable {
 
 	public String getTitle();
 
-	public void setTitle(String title);
+	public void setTitle(String title) throws Exception;
 
 	public String getDescription();
 

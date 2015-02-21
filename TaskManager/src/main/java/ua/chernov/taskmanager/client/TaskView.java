@@ -18,6 +18,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -25,7 +26,6 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
 import ua.chernov.taskmanager.Task;
-
 
 public class TaskView extends GuiView implements ITaskView {
 	// Room.Subscriber subscriber;
@@ -66,7 +66,8 @@ public class TaskView extends GuiView implements ITaskView {
 			}
 		});
 
-		// super(); //super РІС‹Р·С‹РІР°РµС‚ createframe, РєРѕС‚РѕСЂС‹ РІС‹Р·С‹РІР°РµС‚ new
+		// super(); //super РІС‹Р·С‹РІР°РµС‚ createframe, РєРѕС‚РѕСЂС‹
+		// РІС‹Р·С‹РІР°РµС‚ new
 		// JDialog(parentView.getFrame(), "Р—Р°РґР°С‡Р°", true);,
 		// Р° parentView РµС‰Рµ СЂР°РІРЅРѕ null
 
@@ -75,7 +76,6 @@ public class TaskView extends GuiView implements ITaskView {
 
 	protected void createFrame() {
 		frame = new JDialog(parentView.getFrame(), "Task", true);
-
 
 		// frame.addWindowListener(new WindowAdapter() {
 		// @Override
@@ -172,7 +172,7 @@ public class TaskView extends GuiView implements ITaskView {
 		JPanel panelActionButtonGrid = new JPanel();
 		panelActionButton.add(panelActionButtonGrid);
 
-		//panelActionButtonGrid.setLayout(new GridLayout(0, 2, 5, 0));
+		// panelActionButtonGrid.setLayout(new GridLayout(0, 2, 5, 0));
 
 		if ((cardState == CardState.EDIT) || (cardState == CardState.ADD)) {
 			panelActionButtonGrid.setLayout(new GridLayout(0, 2, 5, 0));
@@ -212,21 +212,28 @@ public class TaskView extends GuiView implements ITaskView {
 		if (!textNotifyDate.equals("")) {
 			SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
 			try {
-			NotifyDate = df.parse(tfNotifyDate.getText());
+				NotifyDate = df.parse(tfNotifyDate.getText());
 			} catch (ParseException e) {
-				throw new ParseException("Unable to parse notify date.", e.getErrorOffset());
+				throw new ParseException("Unable to parse notify date.",
+						e.getErrorOffset());
 			}
 		}
 
-		if (cardState == CardState.ADD) {
-			// task = new ScheduledTask(title);
-			task.setTitle(title);
-		}
+		try {
+			if (cardState == CardState.ADD) {
+				// task = new ScheduledTask(title);
 
-		if (cardState == CardState.EDIT) {
-			// task = ((ScheduledTask)task).clone();
-			// task = new ScheduledTask(title);
-			task.setTitle(title);
+				task.setTitle(title);
+			}
+
+			if (cardState == CardState.EDIT) {
+				// task = ((ScheduledTask)task).clone();
+				// task = new ScheduledTask(title);
+				task.setTitle(title);
+			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Warning",
+					JOptionPane.WARNING_MESSAGE);
 		}
 
 		task.setDescription(taDescription.getText());

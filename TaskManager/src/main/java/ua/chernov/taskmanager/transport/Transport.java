@@ -113,7 +113,7 @@ public abstract class Transport {
 			return null;
 		} catch (ClassNotFoundException | RuntimeException e) {
 			// should not happen
-			throw new RuntimeException(e);
+			throw new RuntimeException(e.getMessage(), e);
 			// } catch (Exception|IOException e) {
 		} catch (IOException e) {
 			reportError(e);

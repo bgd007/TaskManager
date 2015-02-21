@@ -1,7 +1,5 @@
 package ua.chernov.taskmanager.helper;
 
-
-
 import java.io.StringWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -25,6 +23,7 @@ public class XmlHelper {
 	public static Node getNode(String tagName, Node parentNode) {
 		return getNode(tagName, parentNode.getChildNodes());
 	}
+
 	public static Node getNode(String tagName, NodeList nodes) {
 		for (int x = 0; x < nodes.getLength(); x++) {
 			Node node = nodes.item(x);
@@ -84,7 +83,7 @@ public class XmlHelper {
 
 		return "";
 	}
-	
+
 	public static String convertDocumentToString(Document doc) {
 		String result = null;
 		TransformerFactory tf = TransformerFactory.newInstance();
@@ -103,23 +102,40 @@ public class XmlHelper {
 
 		return result;
 	}
-	
-	
-	public static Element marshallableToNode(Marshallable marshallable , Document doc) {
+
+	public static Element marshallableToNode(Marshallable marshallable,
+			Document doc) {
 		Element node = marshallable.toXML(doc);
 		node.setAttribute("class", marshallable.getClass().getName());
 		return node;
 	}
 
-	public static Object nodeToMarshallable(Element node) throws NoSuchMethodException, SecurityException, ClassNotFoundException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public static Object nodeToMarshallable(Element node)
+			throws ClassNotFoundException, NoSuchMethodException,
+			SecurityException, InvocationTargetException,
+			IllegalAccessException, IllegalArgumentException
+	// throws NoSuchMethodException, SecurityException,
+	// ClassNotFoundException, IllegalAccessException,
+	// IllegalArgumentException, InvocationTargetException {
+	{
+		Object result = null;
 		String className = node.getAttribute("class");
-		
+
 		Class<?> cls = Class.forName(className);
 		Method methodFromXML = cls.getMethod("fromXML",
 				org.w3c.dom.Element.class);
-		Object result = methodFromXML.invoke(null, node);
-		return result;
 
+		try {
+			result = methodFromXML.invoke(null, node);
+			
+		} catch (InvocationTargetException e) {
+			if (e.getMessage() == null)
+				if (e.getCause() != null)
+					throw new InvocationTargetException(e, e.getCause()
+							.getMessage());
+		}
+
+		return result;
 	}
-	
+
 }

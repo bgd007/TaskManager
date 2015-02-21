@@ -28,6 +28,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import ua.chernov.taskmanager.helper.ExceptionHelper;
 import ua.chernov.taskmanager.helper.XmlHelper;
 import ua.chernov.taskmanager.transport.Packets.Packet;
 
@@ -63,11 +64,11 @@ public class PacketTransporterXML implements PacketTransporter {
 				Document doc = null;
 				try {
 					Method methodToXML = packet.getClass().getMethod("toXML");
-					doc = (Document)methodToXML.invoke(obj);
+					doc = (Document) methodToXML.invoke(obj);
 				} catch (NoSuchMethodException e) {
-					doc = Packet.createPacketDocument(packet.getClass().getSimpleName());
+					doc = Packet.createPacketDocument(packet.getClass()
+							.getSimpleName());
 				}
-								
 
 				DOMSource ds = new DOMSource(doc);
 
@@ -144,8 +145,13 @@ public class PacketTransporterXML implements PacketTransporter {
 				| SecurityException | ClassNotFoundException
 				| IllegalAccessException | IllegalArgumentException
 				| InvocationTargetException | InstantiationException e) {
-			throw new RuntimeException(e);
+			throw new RuntimeException(
+					ExceptionHelper.getLastNotNullMessage(e), e);
 		}
+		// } catch (Exception e) {
+		// throw new RuntimeException(
+		// ExceptionHelper.getLastNotNullMessage(e), e);
+		// }
 
 		return result;
 	}

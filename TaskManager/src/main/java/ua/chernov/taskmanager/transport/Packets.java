@@ -33,9 +33,9 @@ public interface Packets {
 
 	// public static final String OK = "Ok";
 	// public static final String GIVE_TASK_LIST = "Give_task_list";
-	public static final String GET_NEW_TASK = "Get_new_task";
-	public static final String SAVE_TASK_OK = "Save_task_Ok";
-	public static final String DELETE_TASK_OK = "Delete_task_Ok";
+	// public static final String GET_NEW_TASK = "Get_new_task";
+	// public static final String SAVE_TASK_OK = "Save_task_Ok";
+	//public static final String DELETE_TASK_OK = "Delete_task_Ok";
 	public static final String NOTIFY_LATER_OK = "Notify_later_Ok";
 
 	abstract class Packet implements Serializable {
@@ -136,9 +136,10 @@ public interface Packets {
 				throws Exception {
 			String rootName = SendTaskList.class.getSimpleName();
 			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
-		
-			Element nodeTaskList = (Element)root.getFirstChild();
-			TaskList taskList = (TaskList) XmlHelper.nodeToMarshallable(nodeTaskList);
+
+			Element nodeTaskList = (Element) root.getFirstChild();
+			TaskList taskList = (TaskList) XmlHelper
+					.nodeToMarshallable(nodeTaskList);
 
 			SendTaskList result = new SendTaskList(taskList);
 			return result;
@@ -200,32 +201,105 @@ public interface Packets {
 
 	}
 
-	// class GetNewTask implements Serializable {
-	// }
-	//
-	// GetNewTask getNewTask = new GetNewTask();
+	class GetNewTask extends Packet {
+	}
 
-	class SendNewTask implements Serializable {
+	GetNewTask getNewTask = new GetNewTask();
+
+	class SendNewTask extends Packet {
 		Task task;
 
 		public SendNewTask(Task task) {
 			this.task = task;
 		}
+
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = SendNewTask.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+			root.appendChild(XmlHelper.marshallableToNode(task, doc));
+			return doc;
+		}
+
+		public static SendNewTask fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			SendNewTask result = null;
+			try {
+				String rootName = SendNewTask.class.getSimpleName();
+				Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
+
+				Element nodeTask = (Element) root.getFirstChild();
+				Task task = (Task) XmlHelper.nodeToMarshallable(nodeTask);
+
+				result = new SendNewTask(task);
+			} catch (Exception e) {
+				throw e;
+			}
+			return result;
+
+		}
 	}
 
-	class AddTask implements Serializable {
+	class AddTask extends Packet {
 		Task task;
 
 		public AddTask(Task task) {
 			this.task = task;
 		}
+
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = AddTask.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+			root.appendChild(XmlHelper.marshallableToNode(task, doc));
+			return doc;
+		}
+
+		public static AddTask fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			String rootName = AddTask.class.getSimpleName();
+			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
+
+			Element nodeTask = (Element) root.getFirstChild();
+			Task task = (Task) XmlHelper.nodeToMarshallable(nodeTask);
+
+			AddTask result = new AddTask(task);
+			return result;
+		}
+
 	}
 
-	class EditTask implements Serializable {
+	class EditTask extends Packet {
 		Task task;
 
 		public EditTask(Task task) {
 			this.task = task;
+		}
+		
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = EditTask.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+			root.appendChild(XmlHelper.marshallableToNode(task, doc));
+			return doc;
+		}
+
+		public static EditTask fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			String rootName = EditTask.class.getSimpleName();
+			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
+
+			Element nodeTask = (Element) root.getFirstChild();
+			Task task = (Task) XmlHelper.nodeToMarshallable(nodeTask);
+
+			EditTask result = new EditTask(task);
+			return result;
 		}
 	}
 
@@ -276,23 +350,45 @@ public interface Packets {
 
 	}
 
-	// class SaveTaskOk implements Serializable {
-	// }
-	//
-	// SaveTaskOk saveTaskOk = new SaveTaskOk();
+	class SaveTaskOk extends Packet {
+	}
 
-	class DeleteTask implements Serializable {
+	SaveTaskOk saveTaskOk = new SaveTaskOk();
+
+	class DeleteTask extends Packet  {
 		Task task;
 
 		public DeleteTask(Task task) {
 			this.task = task;
 		}
+		
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = DeleteTask.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+			root.appendChild(XmlHelper.marshallableToNode(task, doc));
+			return doc;
+		}
+
+		public static DeleteTask fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			String rootName = DeleteTask.class.getSimpleName();
+			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
+
+			Element nodeTask = (Element) root.getFirstChild();
+			Task task = (Task) XmlHelper.nodeToMarshallable(nodeTask);
+
+			DeleteTask result = new DeleteTask(task);
+			return result;
+		}
 	}
 
-	// class DeleteTaskOk implements Serializable {
-	// }
-	//
-	// DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
+	 class DeleteTaskOk extends Packet {
+	 }
+	
+	 DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
 
 	class Notify implements Serializable {
 		Task task;
