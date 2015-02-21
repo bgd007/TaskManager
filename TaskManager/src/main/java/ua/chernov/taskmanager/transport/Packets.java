@@ -4,16 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
@@ -35,7 +32,7 @@ public interface Packets {
 	 */
 
 	// public static final String OK = "Ok";
-	public static final String GIVE_TASK_LIST = "Give_task_list";
+	// public static final String GIVE_TASK_LIST = "Give_task_list";
 	public static final String GET_NEW_TASK = "Get_new_task";
 	public static final String SAVE_TASK_OK = "Save_task_Ok";
 	public static final String DELETE_TASK_OK = "Delete_task_Ok";
@@ -107,17 +104,46 @@ public interface Packets {
 
 	Ok OK = new Ok();
 
-	// class GiveTaskList implements Serializable {
-	// }
-	//
-	// GiveTaskList giveTaskList = new GiveTaskList();
+	/**
+	 * Client -> Server: GiveTaskList Server -> Client: SendTaskList
+	 */
 
-	class SendTaskList implements Serializable {
+	class GiveTaskList extends Packet {
+	}
+
+	GiveTaskList giveTaskList = new GiveTaskList();
+
+	class SendTaskList extends Packet {
 		TaskList taskList;
 
 		public SendTaskList(TaskList taskList) {
 			this.taskList = taskList;
 		}
+
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = SendTaskList.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+
+			root.appendChild(XmlHelper.marshallableToNode(taskList, doc));
+
+			return doc;
+		}
+
+		public static SendTaskList fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			String rootName = SendTaskList.class.getSimpleName();
+			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
+		
+			Element nodeTaskList = (Element)root.getFirstChild();
+			TaskList taskList = (TaskList) XmlHelper.nodeToMarshallable(nodeTaskList);
+
+			SendTaskList result = new SendTaskList(taskList);
+			return result;
+		}
+
 	}
 
 	@XmlRootElement
@@ -143,32 +169,16 @@ public interface Packets {
 			String rootName = SendTaskById.class.getSimpleName();
 			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
 
-			Element task = (Element) XmlHelper.getNode("task", root);
-			UUID id = UUID.fromString(task.getAttribute("id"));
+			Element nodeTask = (Element) XmlHelper.getNode("task", root);
 
-			String title = XmlHelper.getNodeValue(XmlHelper.getNode("title",
-					task));
+			Task task = (Task) XmlHelper.nodeToMarshallable(nodeTask);
 
-			String description = XmlHelper.getNodeValue(XmlHelper.getNode(
-					"description", task));
+			Element nodeCardState = (Element) XmlHelper.getNode("cardState",
+					root);
+			ITaskView.CardState cardState = ITaskView.CardState
+					.fromString(XmlHelper.getNodeValue(nodeCardState));
 
-			String contacts = XmlHelper.getNodeValue(XmlHelper.getNode(
-					"contacts", task));
-
-			String notifyDateText = XmlHelper.getNodeValue(XmlHelper.getNode(
-					"notifyDate", task));
-			Date notifyDate = null;
-			if (!notifyDateText.equals("")) {
-				notifyDate = 
-			}
-
-			Node nodeDe = XmlHelper.getNode("title", task);
-			String title = XmlHelper.getNodeValue(nodeTitle);
-
-			Node nodeNick = nodePacket.getFirstChild();
-			String nodeValue = XmlHelper.getNodeValue(nodeNick);
-
-			Register result = new Register(nodeValue);
+			SendTaskById result = new SendTaskById(task, cardState);
 			return result;
 		}
 
@@ -179,7 +189,8 @@ public interface Packets {
 			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
 					doc.getChildNodes());
 
-			root.appendChild(task.toXML(doc));
+			// root.appendChild(task.toXML(doc));
+			root.appendChild(XmlHelper.marshallableToNode(task, doc));
 
 			root.appendChild(ITaskView.CardState.toXML(
 					(ITaskView.CardState) cardState, doc));

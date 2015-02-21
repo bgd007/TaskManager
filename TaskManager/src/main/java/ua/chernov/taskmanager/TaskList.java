@@ -3,8 +3,10 @@
 import java.util.Date;
 import java.util.SortedMap;
 
-public abstract class TaskList implements Iterable<Task> {
-	/**  
+import ua.chernov.taskmanager.transport.Marshallable;
+
+public abstract class TaskList implements Iterable<Task>, Marshallable {
+	/**
 	 * Add task
 	 * 
 	 * @param task
@@ -67,5 +69,14 @@ public abstract class TaskList implements Iterable<Task> {
 	 *            path to the file in which is stored
 	 */
 	public abstract void loadFromDisk(String fileName);
+
+//	/**
+//	 * convert task list to xml node
+//	 * 
+//	 * @param doc
+//	 *            DOM document for result node
+//	 * @return
+//	 */
+//	public abstract Node toXML(org.w3c.dom.Document doc);
 
 }

@@ -150,4 +150,9 @@ public class SimpleManager implements Manager {
 		
 	}
 
+//	@Override
+//	public Task taskFromXML(Element node) throws ParseException {		
+//		return ScheduledTask.fromXML(node);
+//	}
+
 }

@@ -7,14 +7,20 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
+import ua.chernov.taskmanager.helper.XmlHelper;
 
 @SuppressWarnings("serial")
 public class MapTaskList extends TaskList implements Cloneable, Serializable,
@@ -68,7 +74,7 @@ public class MapTaskList extends TaskList implements Cloneable, Serializable,
 			String idStr = (id != null) ? id.toString() : "";
 			throw new RuntimeException("Task not found by id " + idStr + ".");
 		}
-		
+
 		return mapTasks.get(id);
 	}
 
@@ -151,6 +157,40 @@ public class MapTaskList extends TaskList implements Cloneable, Serializable,
 		}
 
 		return s;
+	}
+
+	@Override
+	public Element toXML(Document doc) {
+		Element nodeTaskList = doc.createElement("taskList");
+
+		synchronized (mapTasks) {
+			for (Task task : mapTasks.values()) {
+				Element nodeTask = XmlHelper.marshallableToNode(task, doc);
+				nodeTaskList.appendChild(nodeTask);
+			}
+		}
+
+		return nodeTaskList;
+	}
+
+	public static TaskList fromXML(Element node) {
+		MapTaskList result = new MapTaskList();
+
+		NodeList nodesTask = node.getChildNodes();
+
+		for (int i = 0; i < nodesTask.getLength(); i++) {
+			Element nodeTask = (Element) nodesTask.item(i);
+			try {
+				Task task = (Task) XmlHelper.nodeToMarshallable(nodeTask);
+				result.add(task);
+			} catch (NoSuchMethodException | SecurityException
+					| ClassNotFoundException | IllegalAccessException
+					| IllegalArgumentException | InvocationTargetException e) {
+				throw new RuntimeException(e);
+			}
+		}
+		
+		return result;
 	}
 
 }

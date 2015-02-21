@@ -5,11 +5,9 @@ import java.io.Serializable;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.xml.sax.SAXException;
+
 
 /**
  * Abstract transport with event loop and serialized packets.

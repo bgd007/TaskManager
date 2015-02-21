@@ -260,7 +260,7 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 		}
 
 		if (event.getActionCommand().equals(ITaskListView.ACTION_SENDXML)) {
-			UUID id = UUID.fromString("1811b715-3ae5-4523-ac3e-89c217f3d572");
+			UUID id = UUID.fromString("550d97b4-8c87-4893-ae5d-4e9a080e4f2e");
 
 			model.getTaskById(this, id, CardState.EDIT);
 		}

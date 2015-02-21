@@ -1,17 +1,17 @@
 ﻿package ua.chernov.taskmanager.impl;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.UUID;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.helper.DateHelper;
- 
+import ua.chernov.taskmanager.helper.XmlHelper;
+
 @SuppressWarnings("serial")
 public class ScheduledTask implements Task, Serializable, Cloneable {
 	private UUID id;
@@ -24,8 +24,12 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 		this.id = UUID.randomUUID();
 	}
 
+	public ScheduledTask(UUID id) {
+		this.id = id;
+	}
+
 	public ScheduledTask(String title) {
-		this.id = UUID.randomUUID();
+		this();
 		setTitle(title);
 	}
 
@@ -42,8 +46,7 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 	@Override
 	public void setTitle(String title) {
 		if ((title == null) || (title.equals("")))
-			throw new IllegalArgumentException(
-					"Title must be not empty.");
+			throw new IllegalArgumentException("Title must be not empty.");
 
 		this.title = title;
 	}
@@ -80,8 +83,8 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 
 	@Override
 	public String toString() {
-		String textNotifyDate = (notifyDate != null) ? DateHelper.formatDate(notifyDate)
-				: "";
+		String textNotifyDate = (notifyDate != null) ? DateHelper
+				.formatDate(notifyDate) : "";
 
 		StringBuffer str = new StringBuffer("title="
 				+ ((title != null) ? title : ""));
@@ -112,30 +115,57 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 	}
 
 	@Override
-	public Node toXML(Document doc) {
+	public Element toXML(Document doc) {
 		Element nodeTask = doc.createElement("task");
 		nodeTask.setAttribute("id", id.toString());
-		
-		org.w3c.dom.Element nodeTitle = doc.createElement("title");
+
+		Element nodeTitle = doc.createElement("title");
 		nodeTitle.appendChild(doc.createTextNode(title));
 		nodeTask.appendChild(nodeTitle);
 
-		org.w3c.dom.Element nodeDescription = doc.createElement("description");
+		Element nodeDescription = doc.createElement("description");
 		nodeDescription.appendChild(doc.createTextNode(description));
 		nodeTask.appendChild(nodeDescription);
-		
-		org.w3c.dom.Element nodeContacts = doc.createElement("contacts");
+
+		Element nodeContacts = doc.createElement("contacts");
 		nodeContacts.appendChild(doc.createTextNode(contacts));
 		nodeTask.appendChild(nodeContacts);
 
-		SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
-		String textNotifyDate = (notifyDate != null) ? df.format(notifyDate)
-				: "";
-		org.w3c.dom.Element nodeNotifyDate = doc.createElement("notifyDate");
+		String textNotifyDate = (notifyDate != null) ? DateHelper
+				.formatDate(notifyDate) : "";
+		Element nodeNotifyDate = doc.createElement("notifyDate");
 		nodeNotifyDate.appendChild(doc.createTextNode(textNotifyDate));
 		nodeTask.appendChild(nodeNotifyDate);
-		
+
 		return nodeTask;
 	}
+
+	public static Task fromXML(Element node) throws ParseException {
+		UUID id = UUID.fromString(node.getAttribute("id"));
+
+		String title = XmlHelper.getNodeValue(XmlHelper.getNode("title", node));
+
+		String description = XmlHelper.getNodeValue(XmlHelper.getNode(
+				"description", node));
+
+		String contacts = XmlHelper.getNodeValue(XmlHelper.getNode("contacts",
+				node));
+
+		String notifyDateText = XmlHelper.getNodeValue(XmlHelper.getNode(
+				"notifyDate", node));
+		Date notifyDate = null;
+		if (!notifyDateText.equals("")) {
+			notifyDate = DateHelper.parse(notifyDateText);
+		}
+
+		ScheduledTask result = new ScheduledTask(id);
+		result.setTitle(title);
+		result.setDescription(description);
+		result.setContacts(contacts);
+		result.setNotifyDate(notifyDate);
+
+		return result;
+	}
+
 
 }

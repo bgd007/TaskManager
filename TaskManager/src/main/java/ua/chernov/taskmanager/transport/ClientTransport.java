@@ -122,7 +122,7 @@ public class ClientTransport extends Transport implements Manager {
 
 	@Override
 	public void giveTaskList(Subscriber subscriber) {
-		send(Packets.GIVE_TASK_LIST);
+		send(Packets.giveTaskList);
 	}
 
 	@Override

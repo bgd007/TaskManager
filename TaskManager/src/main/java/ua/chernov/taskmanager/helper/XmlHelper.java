@@ -3,6 +3,8 @@ package ua.chernov.taskmanager.helper;
 
 
 import java.io.StringWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
@@ -11,9 +13,12 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import ua.chernov.taskmanager.transport.Marshallable;
 
 public class XmlHelper {
 
@@ -46,12 +51,6 @@ public class XmlHelper {
 			Node node = nodes.item(x);
 			if (node.getNodeName().equalsIgnoreCase(tagName)) {
 				return getNodeValue(node);
-//				NodeList childNodes = node.getChildNodes();
-//				for (int y = 0; y < childNodes.getLength(); y++) {
-//					Node data = childNodes.item(y);
-//					if (data.getNodeType() == Node.TEXT_NODE)
-//						return data.getNodeValue();
-//				}
 			}
 		}
 		return "";
@@ -104,5 +103,23 @@ public class XmlHelper {
 
 		return result;
 	}
+	
+	
+	public static Element marshallableToNode(Marshallable marshallable , Document doc) {
+		Element node = marshallable.toXML(doc);
+		node.setAttribute("class", marshallable.getClass().getName());
+		return node;
+	}
 
+	public static Object nodeToMarshallable(Element node) throws NoSuchMethodException, SecurityException, ClassNotFoundException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		String className = node.getAttribute("class");
+		
+		Class<?> cls = Class.forName(className);
+		Method methodFromXML = cls.getMethod("fromXML",
+				org.w3c.dom.Element.class);
+		Object result = methodFromXML.invoke(null, node);
+		return result;
+
+	}
+	
 }

@@ -1,7 +1,6 @@
 ﻿package ua.chernov.taskmanager.client;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

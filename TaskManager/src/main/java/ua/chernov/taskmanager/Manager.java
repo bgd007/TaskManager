@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager; 
+﻿package ua.chernov.taskmanager;
 
 import java.util.Date;
 
@@ -8,7 +8,7 @@ public interface Manager {
 		String getNick();
 
 		/**
-		 * is performed after the response to the request task list   
+		 * is performed after the response to the request task list
 		 * 
 		 * @param taskList
 		 *            result of request
@@ -170,7 +170,16 @@ public interface Manager {
 			Date notifyLaterDate);
 
 	public String getDefaultDateFormat();
-	
-	
-	public void sendXML(); 
+
+	public void sendXML();
+
+//	/**
+//	 * convert xml node to task instance
+//	 * 
+//	 * @param node
+//	 *            xml node of task
+//	 * @return return task instance
+//	 * @throws ParseException
+//	 */
+//	public Task taskFromXML(Element node) throws ParseException;
 }

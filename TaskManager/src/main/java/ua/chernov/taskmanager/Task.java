@@ -2,10 +2,11 @@
 
 import java.util.Date;
 
+import ua.chernov.taskmanager.transport.Marshallable;
 
-public interface Task {
-//	public static final String DATE_FORMAT = "yyyy.MM.dd HH:mm:ss";
-	
+
+public interface Task extends Marshallable {
+
 	public Object getId();
 
 	public String getTitle();
@@ -25,6 +26,4 @@ public interface Task {
 	public void setContacts(String Contacts);	
 	
 	public Task getClone();
-	
-	public org.w3c.dom.Node toXML(org.w3c.dom.Document doc); 
 }
