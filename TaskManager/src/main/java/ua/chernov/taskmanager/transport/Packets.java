@@ -15,6 +15,7 @@ import org.w3c.dom.Node;
 import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
 import ua.chernov.taskmanager.client.ITaskView;
+import ua.chernov.taskmanager.helper.DateHelper;
 import ua.chernov.taskmanager.helper.XmlHelper;
 
 /**
@@ -35,8 +36,8 @@ public interface Packets {
 	// public static final String GIVE_TASK_LIST = "Give_task_list";
 	// public static final String GET_NEW_TASK = "Get_new_task";
 	// public static final String SAVE_TASK_OK = "Save_task_Ok";
-	//public static final String DELETE_TASK_OK = "Delete_task_Ok";
-	public static final String NOTIFY_LATER_OK = "Notify_later_Ok";
+	// public static final String DELETE_TASK_OK = "Delete_task_Ok";
+	// public static final String NOTIFY_LATER_OK = "Notify_later_Ok";
 
 	abstract class Packet implements Serializable {
 		// public Packet() {
@@ -279,7 +280,7 @@ public interface Packets {
 		public EditTask(Task task) {
 			this.task = task;
 		}
-		
+
 		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
 			String rootName = EditTask.class.getSimpleName();
 			org.w3c.dom.Document doc = createPacketDocument(rootName);
@@ -355,13 +356,13 @@ public interface Packets {
 
 	SaveTaskOk saveTaskOk = new SaveTaskOk();
 
-	class DeleteTask extends Packet  {
+	class DeleteTask extends Packet {
 		Task task;
 
 		public DeleteTask(Task task) {
 			this.task = task;
 		}
-		
+
 		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
 			String rootName = DeleteTask.class.getSimpleName();
 			org.w3c.dom.Document doc = createPacketDocument(rootName);
@@ -385,20 +386,42 @@ public interface Packets {
 		}
 	}
 
-	 class DeleteTaskOk extends Packet {
-	 }
-	
-	 DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
+	class DeleteTaskOk extends Packet {
+	}
 
-	class Notify implements Serializable {
+	DeleteTaskOk deleteTaskOk = new DeleteTaskOk();
+
+	class Notify extends Packet {
 		Task task;
 
 		public Notify(Task task) {
 			this.task = task;
 		}
+
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = Notify.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+			root.appendChild(XmlHelper.marshallableToNode(task, doc));
+			return doc;
+		}
+
+		public static Notify fromXML(org.w3c.dom.Document doc) throws Exception {
+			String rootName = Notify.class.getSimpleName();
+			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
+
+			Element nodeTask = (Element) root.getFirstChild();
+			Task task = (Task) XmlHelper.nodeToMarshallable(nodeTask);
+
+			Notify result = new Notify(task);
+			return result;
+		}
+
 	}
 
-	class NotifyLater implements Serializable {
+	class NotifyLater extends Packet {
 		Object taskId;
 		Date notifyLaterDate;
 
@@ -406,23 +429,65 @@ public interface Packets {
 			this.taskId = taskId;
 			this.notifyLaterDate = notifyLaterDate;
 		}
-	}
 
-	// class NotifyLaterOk implements Serializable {
-	// }
-	//
-	// NotifyLaterOk NotifyLaterOk = new NotifyLaterOk();
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = NotifyLater.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
 
-	/**
-	 * Server -> Client: some user joined event
-	 */
-	class Join implements Serializable {
-		String nick;
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
 
-		public Join(String nick) {
-			this.nick = nick;
+			org.w3c.dom.Element nodeTaskId = doc.createElement("taskId");
+			nodeTaskId.appendChild(doc.createTextNode(taskId.toString()));
+			root.appendChild(nodeTaskId);
+
+			org.w3c.dom.Element nodeNotifyLaterDate = doc
+					.createElement("notifyLaterDate");
+			String textNotifyLaterDate = (notifyLaterDate != null) ? DateHelper
+					.formatDate(notifyLaterDate) : "";
+			nodeNotifyLaterDate.appendChild(doc
+					.createTextNode(textNotifyLaterDate));
+			root.appendChild(nodeNotifyLaterDate);
+
+			return doc;
 		}
+
+		public static NotifyLater fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			Node nodePacket = doc.getChildNodes().item(0);
+
+			Node nodeTaskId = XmlHelper.getNode("taskId",
+					nodePacket.getChildNodes());
+			UUID taskId = UUID.fromString(XmlHelper.getNodeValue(nodeTaskId));
+
+			Node nodeNotifyLaterDate = XmlHelper.getNode("notifyLaterDate",
+					nodePacket.getChildNodes());
+			String textNotifyLaterDate = XmlHelper
+					.getNodeValue(nodeNotifyLaterDate);
+			Date notifyLaterDate = textNotifyLaterDate.equals("") ? null
+					: DateHelper.parse(textNotifyLaterDate);
+
+			NotifyLater result = new NotifyLater(taskId, notifyLaterDate);
+			return result;
+		}
+
 	}
+
+	class NotifyLaterOk extends Packet {
+	}
+
+	NotifyLaterOk notifyLaterOk = new NotifyLaterOk();
+
+//	/**
+//	 * Server -> Client: some user joined event
+//	 */
+//	class Join implements Serializable {
+//		String nick;
+//
+//		public Join(String nick) {
+//			this.nick = nick;
+//		}
+//	}
 
 	/**
 	 * Server -> Client: some user parted event Client -> Server: current user

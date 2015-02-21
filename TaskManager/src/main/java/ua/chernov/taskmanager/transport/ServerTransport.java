@@ -166,7 +166,7 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 	@Override
 	public void receiveNotifyLaterOk() {
-		send(Packets.NOTIFY_LATER_OK);
+		send(Packets.notifyLaterOk);
 	}
 
 	@Override

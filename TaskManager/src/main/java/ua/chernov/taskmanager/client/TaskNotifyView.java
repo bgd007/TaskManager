@@ -121,6 +121,7 @@ public class TaskNotifyView extends GuiView implements ITaskNotifyView {
 		panelContacts.add(lbTitle);
 
 		tfTitle = new JTextField();
+		tfTitle.setEditable(false);
 		panelContacts.add(tfTitle);
 		tfTitle.setColumns(20);
 
@@ -137,6 +138,7 @@ public class TaskNotifyView extends GuiView implements ITaskNotifyView {
 
 		taDescription = new JTextArea();
 		taDescription.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		taDescription.setEditable(false);
 		panelDescription.add(taDescription);
 
 		JPanel panelActionButton = new JPanel();

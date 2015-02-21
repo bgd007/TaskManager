@@ -5351,3 +5351,1040 @@ java.net.ConnectException: Connection refused: connect
 2015-02-21 23:21:07,839 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
 2015-02-21 23:21:07,839 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
 2015-02-21 23:21:07,839 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:31:41,074 INFO  [main] server.Server (Server.java:64) - Shut Down Hook Attached.
+2015-02-21 23:31:41,081 INFO  [main] server.Server (Server.java:37) - Start listening...
+2015-02-21 23:31:46,697 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-21 23:31:46,709 INFO  [main] server.Server (Server.java:41) - Connection from /127.0.0.1:32397
+2015-02-21 23:31:46,717 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-21 23:31:46,778 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User81</nick></Register>
+2015-02-21 23:31:46,779 INFO  [main] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:46,845 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User81</nick></Register>
+2015-02-21 23:31:46,846 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Register
+2015-02-21 23:31:46,847 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:46,848 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:46,849 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:46,849 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@54c65983
+2015-02-21 23:31:46,849 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:34) - Add subscriber. Subscribers.size=1
+2015-02-21 23:31:46,860 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:31:46,863 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:31:46,864 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Ok
+2015-02-21 23:31:46,864 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:46,864 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:31:46,864 INFO  [main] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:31:46,874 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:31:47,287 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:31:47,291 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:31:47,291 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:31:47,296 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:31:47,296 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:31:47,297 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:47,297 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:31:47,297 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:31:47,297 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@6f2735cc
+2015-02-21 23:31:47,309 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:31:47,310 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:31:47,310 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:31:47,317 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:31:47,317 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:31:47,317 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:47,319 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:31:47,327 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:31:47,328 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@23788242
+2015-02-21 23:31:47,328 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:31:51,757 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed edit
+2015-02-21 23:31:51,765 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:31:51,767 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:31:51,776 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:31:51,777 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetTaskById
+2015-02-21 23:31:51,777 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:51,778 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:31:51,782 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:31:51,783 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetTaskById@6690811b
+2015-02-21 23:31:51,791 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:31:51,791 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:31:51,791 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:142) - send Packets.SendTaskById
+2015-02-21 23:31:51,794 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:31:51,795 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskById
+2015-02-21 23:31:51,795 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:31:51,795 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:31:51,797 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:31:51,797 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskById@2cb7e284
+2015-02-21 23:31:51,797 INFO  [Thread-1] client.TaskController (TaskController.java:81) - receiveTaskById
+2015-02-21 23:32:08,389 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:32:08,398 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></EditTask>
+2015-02-21 23:32:08,400 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:32:08,409 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></EditTask>
+2015-02-21 23:32:08,410 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node EditTask
+2015-02-21 23:32:08,411 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:08,411 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:32:08,413 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:32:08,413 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$EditTask@58101afe
+2015-02-21 23:32:08,416 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:32:08,417 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:32:08,419 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:32:08,420 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:32:08,420 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:08,420 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:32:08,421 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:32:08,421 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@6f6c1fb0
+2015-02-21 23:32:08,421 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:32:08,421 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:32:08,431 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:32:08,435 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:32:08,436 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:08,439 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:32:08,440 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:32:08,440 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:08,440 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:08,441 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:08,441 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@9305bf8
+2015-02-21 23:32:08,444 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:32:08,445 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:08,445 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:32:08,449 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:32:08,449 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:32:08,449 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:08,450 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:08,450 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:08,450 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@7ea9acff
+2015-02-21 23:32:08,451 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:32:13,966 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:32:14,458 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-21 23:32:14,463 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Part/>
+2015-02-21 23:32:14,465 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:32:14,470 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Part/>
+2015-02-21 23:32:14,471 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Part
+2015-02-21 23:32:14,471 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:14,471 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:32:14,472 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:32:14,472 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@d0209be
+2015-02-21 23:32:14,473 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:41) - Remove subscriber. Subscribers.size=0
+2015-02-21 23:32:14,476 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:32:14,477 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:32:14,479 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:32:14,480 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Ok
+2015-02-21 23:32:14,480 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:14,480 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:32:14,481 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:32:40,506 INFO  [main] server.Server (Server.java:64) - Shut Down Hook Attached.
+2015-02-21 23:32:40,512 INFO  [main] server.Server (Server.java:37) - Start listening...
+2015-02-21 23:32:42,726 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-21 23:32:42,740 INFO  [main] server.Server (Server.java:41) - Connection from /127.0.0.1:32400
+2015-02-21 23:32:42,747 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-21 23:32:42,813 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User54</nick></Register>
+2015-02-21 23:32:42,814 INFO  [main] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:42,868 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User54</nick></Register>
+2015-02-21 23:32:42,869 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Register
+2015-02-21 23:32:42,870 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:42,871 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:42,872 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:42,872 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@216c6a89
+2015-02-21 23:32:42,872 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:34) - Add subscriber. Subscribers.size=1
+2015-02-21 23:32:42,882 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:32:42,883 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:32:42,886 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:32:42,886 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Ok
+2015-02-21 23:32:42,886 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:42,887 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:32:42,888 INFO  [main] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:32:43,231 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:32:43,236 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:32:43,237 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:43,239 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:32:43,240 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:32:43,240 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:43,240 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:43,241 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:43,241 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@30ec6243
+2015-02-21 23:32:43,253 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:32:43,253 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:43,253 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:32:43,259 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:32:43,259 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:32:43,259 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:43,261 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:43,270 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:43,271 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@4e827845
+2015-02-21 23:32:43,271 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:32:45,005 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed edit
+2015-02-21 23:32:45,013 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:32:45,015 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:32:45,024 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:32:45,025 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetTaskById
+2015-02-21 23:32:45,025 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:45,026 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:32:45,030 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:32:45,031 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetTaskById@6690811b
+2015-02-21 23:32:45,040 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:32:45,041 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:32:45,041 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:142) - send Packets.SendTaskById
+2015-02-21 23:32:45,042 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:32:45,043 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskById
+2015-02-21 23:32:45,043 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:45,043 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:32:45,044 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:32:45,045 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskById@13452bd1
+2015-02-21 23:32:45,045 INFO  [Thread-1] client.TaskController (TaskController.java:81) - receiveTaskById
+2015-02-21 23:32:55,157 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:32:55,166 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></EditTask>
+2015-02-21 23:32:55,167 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:32:55,175 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></EditTask>
+2015-02-21 23:32:55,177 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node EditTask
+2015-02-21 23:32:55,178 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:55,179 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:32:55,181 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:32:55,181 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$EditTask@58101afe
+2015-02-21 23:32:55,184 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:32:55,185 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:32:55,188 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:32:55,188 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:32:55,188 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:55,189 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:32:55,189 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:32:55,189 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@7f963382
+2015-02-21 23:32:55,190 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:32:55,190 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:32:55,201 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:32:55,206 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:32:55,207 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:55,211 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:32:55,213 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:32:55,213 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:55,213 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:55,213 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:32:55,213 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@9305bf8
+2015-02-21 23:32:55,216 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:32:55,216 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:55,217 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:32:55,220 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:32:55,221 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:32:55,221 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:32:55,221 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:55,222 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:32:55,222 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@67eae247
+2015-02-21 23:32:55,223 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:33:00,473 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:32:40] to [2015.02.21 23:33:00]
+2015-02-21 23:33:00,481 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></Notify>
+2015-02-21 23:33:00,483 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:33:00,484 INFO  [Thread-1] transport.ServerTransport (ServerTransport.java:164) - send Packets.Notify
+2015-02-21 23:33:00,489 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:33:00</notifyDate></task></Notify>
+2015-02-21 23:33:00,490 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Notify
+2015-02-21 23:33:00,491 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:33:00,491 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:33:00,492 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:33:00,493 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Notify@1567ca08
+2015-02-21 23:33:00,493 INFO  [Thread-1] client.TaskController (TaskController.java:118) - receiveNotify
+2015-02-21 23:33:19,068 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed notifyLater
+2015-02-21 23:33:19,077 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</taskId><notifyLaterDate>2015.02.21 23:34:00</notifyLaterDate></NotifyLater>
+2015-02-21 23:33:19,079 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:33:19,083 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</taskId><notifyLaterDate>2015.02.21 23:34:00</notifyLaterDate></NotifyLater>
+2015-02-21 23:33:19,085 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node NotifyLater
+2015-02-21 23:33:19,086 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:33:19,087 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:33:20,485 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:33:00] to [2015.02.21 23:33:20]
+2015-02-21 23:33:40,486 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:33:20] to [2015.02.21 23:33:40]
+2015-02-21 23:33:42,487 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-21 23:41:50,763 INFO  [main] server.Server (Server.java:64) - Shut Down Hook Attached.
+2015-02-21 23:41:50,769 INFO  [main] server.Server (Server.java:37) - Start listening...
+2015-02-21 23:41:56,300 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-21 23:41:56,312 INFO  [main] server.Server (Server.java:41) - Connection from /127.0.0.1:32423
+2015-02-21 23:41:56,321 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-21 23:41:56,386 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User71</nick></Register>
+2015-02-21 23:41:56,387 INFO  [main] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:41:56,437 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User71</nick></Register>
+2015-02-21 23:41:56,438 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Register
+2015-02-21 23:41:56,440 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:41:56,441 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:41:56,441 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:41:56,442 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@2a1ed2f0
+2015-02-21 23:41:56,442 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:34) - Add subscriber. Subscribers.size=1
+2015-02-21 23:41:56,452 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:41:56,453 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:41:56,456 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:41:56,456 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Ok
+2015-02-21 23:41:56,456 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:41:56,456 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:41:56,457 INFO  [main] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:41:56,870 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:41:56,874 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:41:56,874 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:41:56,877 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:41:56,878 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:41:56,879 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:41:56,879 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:41:56,879 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:41:56,879 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@4d40cc82
+2015-02-21 23:41:56,891 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:41:56,892 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:41:56,892 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:41:56,898 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:41:56,898 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:41:56,898 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:41:56,899 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:41:56,907 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:41:56,907 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@2c1e29ca
+2015-02-21 23:41:56,907 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:42:00,228 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed edit
+2015-02-21 23:42:00,237 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:42:00,239 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:42:00,244 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:42:00,245 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetTaskById
+2015-02-21 23:42:00,247 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:42:00,249 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:42:00,251 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:42:00,252 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetTaskById@75596160
+2015-02-21 23:42:00,255 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:42:00,256 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:42:00,257 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:142) - send Packets.SendTaskById
+2015-02-21 23:42:00,260 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:42:00,260 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskById
+2015-02-21 23:42:00,261 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:42:00,261 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:42:00,262 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:42:00,262 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskById@450295c9
+2015-02-21 23:42:00,263 INFO  [Thread-1] client.TaskController (TaskController.java:81) - receiveTaskById
+2015-02-21 23:42:09,300 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:42:09,312 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:43:00</notifyDate></task></EditTask>
+2015-02-21 23:42:09,314 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:42:09,323 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:43:00</notifyDate></task></EditTask>
+2015-02-21 23:42:09,325 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node EditTask
+2015-02-21 23:42:09,326 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:42:09,327 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:42:09,332 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:42:09,333 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$EditTask@9305bf8
+2015-02-21 23:42:09,339 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:42:09,342 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:42:09,343 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:42:09,343 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:42:09,343 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:42:09,343 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:42:09,344 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@6f6c1fb0
+2015-02-21 23:42:09,344 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:42:09,344 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:42:09,345 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:42:09,352 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:42:09,355 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:42:09,356 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:42:09,365 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:42:09,366 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:42:09,366 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:42:09,366 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:42:09,366 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:42:09,367 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@7de2310b
+2015-02-21 23:42:09,374 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:43:00</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:42:09,377 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:43:00</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:42:09,377 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:42:09,378 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:42:09,378 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:42:09,378 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:42:09,379 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@7ea9acff
+2015-02-21 23:42:09,379 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:42:09,382 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:42:09,383 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:42:10,731 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:41:50] to [2015.02.21 23:42:10]
+2015-02-21 23:42:30,733 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:42:10] to [2015.02.21 23:42:30]
+2015-02-21 23:42:50,734 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:42:30] to [2015.02.21 23:42:50]
+2015-02-21 23:43:10,735 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:42:50] to [2015.02.21 23:43:10]
+2015-02-21 23:43:10,745 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:43:00</notifyDate></task></Notify>
+2015-02-21 23:43:10,747 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:43:10,748 INFO  [Thread-1] transport.ServerTransport (ServerTransport.java:164) - send Packets.Notify
+2015-02-21 23:43:10,752 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:43:00</notifyDate></task></Notify>
+2015-02-21 23:43:10,753 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Notify
+2015-02-21 23:43:10,754 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:43:10,755 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:43:10,757 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:43:10,758 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Notify@c556032
+2015-02-21 23:43:10,759 INFO  [Thread-1] client.TaskController (TaskController.java:118) - receiveNotify
+2015-02-21 23:43:30,002 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:43:30,749 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:43:10] to [2015.02.21 23:43:30]
+2015-02-21 23:43:31,348 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:43:31,838 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-21 23:43:31,844 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Part/>
+2015-02-21 23:43:31,846 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:43:31,854 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Part/>
+2015-02-21 23:43:31,855 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Part
+2015-02-21 23:43:31,856 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:43:31,857 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:43:31,858 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:43:31,859 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@4d639a35
+2015-02-21 23:43:31,860 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:41) - Remove subscriber. Subscribers.size=0
+2015-02-21 23:43:31,865 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:43:31,867 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:43:31,871 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:43:31,872 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Ok
+2015-02-21 23:43:31,872 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:43:31,872 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:43:31,873 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:43:50,750 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:43:30] to [2015.02.21 23:43:50]
+2015-02-21 23:44:10,751 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:43:50] to [2015.02.21 23:44:10]
+2015-02-21 23:44:30,751 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:44:10] to [2015.02.21 23:44:30]
+2015-02-21 23:44:50,752 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:44:30] to [2015.02.21 23:44:50]
+2015-02-21 23:45:09,052 INFO  [main] server.Server (Server.java:64) - Shut Down Hook Attached.
+2015-02-21 23:45:09,058 INFO  [main] server.Server (Server.java:37) - Start listening...
+2015-02-21 23:45:15,144 INFO  [main] client.TaskController (TaskController.java:44) - TaskController client conncting to server...
+2015-02-21 23:45:15,157 INFO  [main] server.Server (Server.java:41) - Connection from /127.0.0.1:32436
+2015-02-21 23:45:15,165 INFO  [main] client.TaskController (TaskController.java:54) - TaskController client connected, registering...
+2015-02-21 23:45:15,228 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User99</nick></Register>
+2015-02-21 23:45:15,229 INFO  [main] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:15,277 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Register><nick>User99</nick></Register>
+2015-02-21 23:45:15,277 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Register
+2015-02-21 23:45:15,279 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:15,280 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:15,280 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:15,281 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Register@216c6a89
+2015-02-21 23:45:15,281 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:34) - Add subscriber. Subscribers.size=1
+2015-02-21 23:45:15,292 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:45:15,293 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:45:15,296 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:45:15,296 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Ok
+2015-02-21 23:45:15,297 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:15,297 INFO  [main] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:45:15,297 INFO  [main] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:45:15,697 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:45:15,700 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:45:15,702 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:15,712 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:45:15,712 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:45:15,712 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:15,713 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:15,713 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:15,713 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@6f2735cc
+2015-02-21 23:45:15,727 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:45:15,733 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:15,733 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:45:15,735 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:45:15,736 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:45:15,736 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:15,737 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:15,744 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:15,745 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@4e827845
+2015-02-21 23:45:15,745 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:45:19,337 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed edit
+2015-02-21 23:45:19,345 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:45:19,347 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:45:19,354 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:45:19,356 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetTaskById
+2015-02-21 23:45:19,357 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:19,358 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:45:19,361 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:45:19,362 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetTaskById@6690811b
+2015-02-21 23:45:19,366 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:45:19,367 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:45:19,367 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:142) - send Packets.SendTaskById
+2015-02-21 23:45:19,370 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 20:44:21</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:45:19,370 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskById
+2015-02-21 23:45:19,371 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:19,371 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:45:19,372 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:45:19,372 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskById@450295c9
+2015-02-21 23:45:19,373 INFO  [Thread-1] client.TaskController (TaskController.java:81) - receiveTaskById
+2015-02-21 23:45:29,018 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:45:09] to [2015.02.21 23:45:29]
+2015-02-21 23:45:30,897 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:45:30,907 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task></EditTask>
+2015-02-21 23:45:30,909 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:45:30,916 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task></EditTask>
+2015-02-21 23:45:30,917 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node EditTask
+2015-02-21 23:45:30,917 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:30,919 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:45:30,922 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:45:30,923 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$EditTask@58101afe
+2015-02-21 23:45:30,930 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:45:30,931 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:45:30,938 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:45:30,939 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:45:30,940 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:30,940 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:45:30,941 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:45:30,941 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@2b1eb67d
+2015-02-21 23:45:30,942 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:45:30,942 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:45:30,955 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:45:30,959 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:45:30,960 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:30,963 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:45:30,964 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:45:30,964 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:30,964 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:30,965 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:30,965 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@9305bf8
+2015-02-21 23:45:30,969 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:45:30,970 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:30,970 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:45:30,974 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:45:30,974 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:45:30,974 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:30,974 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:30,976 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:30,976 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@4973ab0a
+2015-02-21 23:45:30,976 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:45:40,993 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed edit
+2015-02-21 23:45:41,000 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:45:41,001 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:45:41,007 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:45:41,009 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetTaskById
+2015-02-21 23:45:41,010 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:41,010 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:45:41,011 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:45:41,012 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetTaskById@7de2310b
+2015-02-21 23:45:41,019 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:45:41,021 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:45:41,021 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:142) - send Packets.SendTaskById
+2015-02-21 23:45:41,024 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:45:41,025 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskById
+2015-02-21 23:45:41,025 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:41,025 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:45:41,026 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:45:41,026 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskById@359cda50
+2015-02-21 23:45:41,027 INFO  [Thread-1] client.TaskController (TaskController.java:81) - receiveTaskById
+2015-02-21 23:45:45,217 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:45:45,225 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:46:00</notifyDate></task></EditTask>
+2015-02-21 23:45:45,226 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:45:45,235 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:46:00</notifyDate></task></EditTask>
+2015-02-21 23:45:45,236 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node EditTask
+2015-02-21 23:45:45,237 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:45,238 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:45:45,240 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:45:45,241 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$EditTask@5e1ba3db
+2015-02-21 23:45:45,265 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:45:45,266 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:45:45,267 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:45:45,268 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:45:45,268 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:45,268 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:45:45,269 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:45:45,269 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@65ce3f76
+2015-02-21 23:45:45,269 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:45:45,269 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:45:45,280 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:45:45,283 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:45:45,284 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:45,287 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:45:45,288 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:45:45,288 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:45,288 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:45,288 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:45:45,289 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@68a2af21
+2015-02-21 23:45:45,291 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:46:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:45:45,292 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:45,292 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:45:45,297 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:46:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:45:45,297 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:45:45,297 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:45:45,298 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:45,298 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:45:45,298 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@27ef6570
+2015-02-21 23:45:45,298 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:45:49,020 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:45:29] to [2015.02.21 23:45:49]
+2015-02-21 23:46:09,022 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:45:49] to [2015.02.21 23:46:09]
+2015-02-21 23:46:09,033 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:46:00</notifyDate></task></Notify>
+2015-02-21 23:46:09,035 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:46:09,036 INFO  [Thread-1] transport.ServerTransport (ServerTransport.java:164) - send Packets.Notify
+2015-02-21 23:46:09,041 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:46:00</notifyDate></task></Notify>
+2015-02-21 23:46:09,041 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Notify
+2015-02-21 23:46:09,042 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:09,043 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:46:09,045 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:46:09,046 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Notify@53511634
+2015-02-21 23:46:09,047 INFO  [Thread-1] client.TaskController (TaskController.java:118) - receiveNotify
+2015-02-21 23:46:14,976 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed notifyLater
+2015-02-21 23:46:14,985 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</taskId><notifyLaterDate>2015.02.21 23:47:09</notifyLaterDate></NotifyLater>
+2015-02-21 23:46:14,987 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:46:14,992 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</taskId><notifyLaterDate>2015.02.21 23:47:09</notifyLaterDate></NotifyLater>
+2015-02-21 23:46:14,993 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node NotifyLater
+2015-02-21 23:46:14,994 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:14,995 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:46:14,997 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:46:14,998 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$NotifyLater@10bdf2cc
+2015-02-21 23:46:15,002 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLaterOk/>
+2015-02-21 23:46:15,004 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:46:15,008 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLaterOk/>
+2015-02-21 23:46:15,009 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node NotifyLaterOk
+2015-02-21 23:46:15,010 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:15,010 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:46:15,011 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:46:15,011 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$NotifyLaterOk@51d6ba37
+2015-02-21 23:46:15,011 INFO  [Thread-1] client.TaskController (TaskController.java:124) - receiveNotifyLaterOk
+2015-02-21 23:46:15,012 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:46:15,022 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:46:15,026 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:15,027 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:15,030 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:15,031 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:46:15,031 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:15,031 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:15,032 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:15,032 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@48f8dad
+2015-02-21 23:46:15,036 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:15,036 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:15,037 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:46:15,041 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:15,041 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:46:15,041 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:15,041 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:15,042 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:15,042 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@561393bc
+2015-02-21 23:46:15,042 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:46:22,968 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed add
+2015-02-21 23:46:22,975 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetNewTask/>
+2015-02-21 23:46:22,977 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetNewTask
+2015-02-21 23:46:22,986 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetNewTask/>
+2015-02-21 23:46:22,987 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetNewTask
+2015-02-21 23:46:22,988 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:22,989 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetNewTask
+2015-02-21 23:46:22,990 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetNewTask
+2015-02-21 23:46:22,991 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetNewTask@107525ad
+2015-02-21 23:46:23,069 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendNewTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title/><description/><contacts/><notifyDate/></task></SendNewTask>
+2015-02-21 23:46:23,069 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-21 23:46:23,070 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:175) - send Packets.SendNewTask
+2015-02-21 23:46:23,073 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendNewTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title/><description/><contacts/><notifyDate/></task></SendNewTask>
+2015-02-21 23:46:23,073 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendNewTask
+2015-02-21 23:46:23,073 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:23,074 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-21 23:46:23,074 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-21 23:46:23,074 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendNewTask@19643eda
+2015-02-21 23:46:23,074 INFO  [Thread-1] client.TaskController (TaskController.java:87) - receiveNewTask
+2015-02-21 23:46:26,672 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:46:26,680 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><AddTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task></AddTask>
+2015-02-21 23:46:26,681 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-21 23:46:26,685 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><AddTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task></AddTask>
+2015-02-21 23:46:26,685 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node AddTask
+2015-02-21 23:46:26,685 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:26,686 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-21 23:46:26,687 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-21 23:46:26,687 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$AddTask@5217e8de
+2015-02-21 23:46:26,690 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:46:26,691 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:26,701 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:46:26,701 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:46:26,702 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:26,702 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:26,702 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:26,703 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@1082d811
+2015-02-21 23:46:26,703 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:46:26,703 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:46:26,713 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:46:26,717 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:26,718 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:26,722 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:26,723 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:46:26,723 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:26,723 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:26,723 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:26,723 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@1fb970ed
+2015-02-21 23:46:26,726 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:26,727 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:26,727 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:46:26,731 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:26,732 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:46:26,732 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:26,732 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:26,733 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:26,734 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@52f2cc2d
+2015-02-21 23:46:26,734 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:46:28,705 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed add
+2015-02-21 23:46:28,710 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetNewTask/>
+2015-02-21 23:46:28,712 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetNewTask
+2015-02-21 23:46:28,721 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetNewTask/>
+2015-02-21 23:46:28,722 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetNewTask
+2015-02-21 23:46:28,722 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:28,722 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetNewTask
+2015-02-21 23:46:28,723 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetNewTask
+2015-02-21 23:46:28,723 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetNewTask@1b7347df
+2015-02-21 23:46:28,726 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendNewTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title/><description/><contacts/><notifyDate/></task></SendNewTask>
+2015-02-21 23:46:28,727 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-21 23:46:28,727 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:175) - send Packets.SendNewTask
+2015-02-21 23:46:28,729 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendNewTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title/><description/><contacts/><notifyDate/></task></SendNewTask>
+2015-02-21 23:46:28,730 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendNewTask
+2015-02-21 23:46:28,730 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:28,731 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-21 23:46:28,732 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendNewTask
+2015-02-21 23:46:28,732 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendNewTask@4d4a7b8b
+2015-02-21 23:46:28,733 INFO  [Thread-1] client.TaskController (TaskController.java:87) - receiveNewTask
+2015-02-21 23:46:29,037 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:46:09] to [2015.02.21 23:46:29]
+2015-02-21 23:46:35,024 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:46:35,032 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><AddTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></AddTask>
+2015-02-21 23:46:35,034 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-21 23:46:35,045 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><AddTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></AddTask>
+2015-02-21 23:46:35,046 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node AddTask
+2015-02-21 23:46:35,047 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:35,047 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-21 23:46:35,049 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$AddTask
+2015-02-21 23:46:35,049 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$AddTask@7dd5894a
+2015-02-21 23:46:35,053 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:46:35,054 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:35,058 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:46:35,058 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:46:35,058 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:35,059 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:35,059 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:35,059 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@41043a18
+2015-02-21 23:46:35,059 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:46:35,060 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:46:35,069 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:46:35,073 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:35,074 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:35,076 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:35,077 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:46:35,077 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:35,077 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:35,078 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:35,078 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@4e2899d0
+2015-02-21 23:46:35,081 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:35,082 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:35,082 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:46:35,084 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:35,084 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:46:35,085 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:35,085 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:35,086 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:35,086 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@2be5d5c1
+2015-02-21 23:46:35,087 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:46:43,360 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed edit
+2015-02-21 23:46:43,367 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:46:43,369 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:46:43,375 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GetTaskById><id>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</id><cardState>EDIT</cardState></GetTaskById>
+2015-02-21 23:46:43,376 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GetTaskById
+2015-02-21 23:46:43,376 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:43,377 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:46:43,378 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GetTaskById
+2015-02-21 23:46:43,379 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GetTaskById@4b8a4ec6
+2015-02-21 23:46:43,385 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:46:43,387 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:46:43,387 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:142) - send Packets.SendTaskById
+2015-02-21 23:46:43,391 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskById><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 20:44:38</notifyDate></task><cardState>EDIT</cardState></SendTaskById>
+2015-02-21 23:46:43,392 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskById
+2015-02-21 23:46:43,392 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:43,392 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:46:43,393 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskById
+2015-02-21 23:46:43,393 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskById@2ae827e1
+2015-02-21 23:46:43,394 INFO  [Thread-1] client.TaskController (TaskController.java:81) - receiveTaskById
+2015-02-21 23:46:49,038 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:46:29] to [2015.02.21 23:46:49]
+2015-02-21 23:46:53,032 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed save
+2015-02-21 23:46:53,040 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task></EditTask>
+2015-02-21 23:46:53,041 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:46:53,051 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><EditTask><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task></EditTask>
+2015-02-21 23:46:53,051 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node EditTask
+2015-02-21 23:46:53,052 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:53,052 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:46:53,053 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$EditTask
+2015-02-21 23:46:53,053 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$EditTask@6539cfe8
+2015-02-21 23:46:53,056 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:46:53,065 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:53,067 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SaveTaskOk/>
+2015-02-21 23:46:53,068 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SaveTaskOk
+2015-02-21 23:46:53,068 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:53,068 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:53,068 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SaveTaskOk
+2015-02-21 23:46:53,069 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SaveTaskOk@bb8945a
+2015-02-21 23:46:53,069 INFO  [Thread-1] client.TaskController (TaskController.java:98) - receiveSaveTaskOk
+2015-02-21 23:46:53,069 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:46:53,077 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:46:53,082 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:53,083 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:53,083 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:46:53,084 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:46:53,084 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:53,084 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:53,084 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:46:53,084 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@3680bc43
+2015-02-21 23:46:53,087 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:53,087 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:53,088 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:46:53,090 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:46:53,091 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:46:53,091 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:46:53,091 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:53,092 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:46:53,092 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@7f26bd42
+2015-02-21 23:46:53,092 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:47:09,039 INFO  [Thread-1] impl.SimpleNotifier (SimpleNotifier.java:60) - dispatchNotifyLoop from [2015.02.21 23:46:49] to [2015.02.21 23:47:09]
+2015-02-21 23:47:09,045 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task></Notify>
+2015-02-21 23:47:09,048 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:47:09,049 INFO  [Thread-1] transport.ServerTransport (ServerTransport.java:164) - send Packets.Notify
+2015-02-21 23:47:09,056 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task></Notify>
+2015-02-21 23:47:09,057 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:47:09,058 INFO  [Thread-1] transport.ServerTransport (ServerTransport.java:164) - send Packets.Notify
+2015-02-21 23:47:09,059 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task></Notify>
+2015-02-21 23:47:09,061 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Notify
+2015-02-21 23:47:09,062 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:09,062 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:47:09,064 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:47:09,064 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Notify@48537945
+2015-02-21 23:47:09,065 INFO  [Thread-1] client.TaskController (TaskController.java:118) - receiveNotify
+2015-02-21 23:47:09,075 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Notify><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:47:09</notifyDate></task></Notify>
+2015-02-21 23:47:09,076 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Notify
+2015-02-21 23:47:09,076 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:09,089 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:47:09,090 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Notify
+2015-02-21 23:47:09,090 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Notify@4856412e
+2015-02-21 23:47:09,090 INFO  [Thread-1] client.TaskController (TaskController.java:118) - receiveNotify
+2015-02-21 23:47:17,375 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed notifyLater
+2015-02-21 23:47:17,382 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</taskId><notifyLaterDate>2015.02.21 23:48:09</notifyLaterDate></NotifyLater>
+2015-02-21 23:47:17,384 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:47:17,389 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>8ddf5da3-8dca-4f94-8907-6ca78e8dd807</taskId><notifyLaterDate>2015.02.21 23:48:09</notifyLaterDate></NotifyLater>
+2015-02-21 23:47:17,391 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node NotifyLater
+2015-02-21 23:47:17,392 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:17,392 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:47:17,393 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:47:17,394 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$NotifyLater@1105b8ef
+2015-02-21 23:47:17,400 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLaterOk/>
+2015-02-21 23:47:17,402 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:47:17,407 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLaterOk/>
+2015-02-21 23:47:17,408 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node NotifyLaterOk
+2015-02-21 23:47:17,408 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:17,409 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:47:17,410 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:47:17,410 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$NotifyLaterOk@73fae0f0
+2015-02-21 23:47:17,411 INFO  [Thread-1] client.TaskController (TaskController.java:124) - receiveNotifyLaterOk
+2015-02-21 23:47:17,411 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:47:17,419 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:47:17,425 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:47:17,425 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:47:17,434 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:47:17,434 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:47:17,435 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:17,435 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:47:17,435 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:47:17,435 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@eb05ba4
+2015-02-21 23:47:17,438 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:48:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:47:17,439 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:47:17,439 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:47:17,444 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:48:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:47:00</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:47:17,444 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:47:17,445 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:17,445 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:47:17,446 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:47:17,446 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@1fc8170
+2015-02-21 23:47:17,446 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:47:19,408 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed notifyLater
+2015-02-21 23:47:19,415 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</taskId><notifyLaterDate>2015.02.21 23:48:09</notifyLaterDate></NotifyLater>
+2015-02-21 23:47:19,416 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:47:19,421 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLater><taskId>550d97b4-8c87-4893-ae5d-4e9a080e4f2e</taskId><notifyLaterDate>2015.02.21 23:48:09</notifyLaterDate></NotifyLater>
+2015-02-21 23:47:19,424 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node NotifyLater
+2015-02-21 23:47:19,425 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:19,426 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:47:19,427 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$NotifyLater
+2015-02-21 23:47:19,428 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$NotifyLater@5c507384
+2015-02-21 23:47:19,434 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLaterOk/>
+2015-02-21 23:47:19,435 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:47:19,439 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><NotifyLaterOk/>
+2015-02-21 23:47:19,440 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node NotifyLaterOk
+2015-02-21 23:47:19,441 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:19,442 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:47:19,442 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$NotifyLaterOk
+2015-02-21 23:47:19,443 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$NotifyLaterOk@5c8dd70b
+2015-02-21 23:47:19,444 INFO  [Thread-1] client.TaskController (TaskController.java:124) - receiveNotifyLaterOk
+2015-02-21 23:47:19,445 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:47:19,455 INFO  [Thread-1] client.TaskController (TaskController.java:158) - actionPerformed list
+2015-02-21 23:47:19,458 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:47:19,458 INFO  [Thread-1] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:47:19,462 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><GiveTaskList/>
+2015-02-21 23:47:19,463 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node GiveTaskList
+2015-02-21 23:47:19,463 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:19,463 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:47:19,464 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$GiveTaskList
+2015-02-21 23:47:19,464 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$GiveTaskList@25d00e75
+2015-02-21 23:47:19,469 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:48:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:48:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:47:19,470 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:47:19,470 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:122) - send Packets.SendTaskList
+2015-02-21 23:47:19,475 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SendTaskList><taskList class="ua.chernov.taskmanager.impl.MapTaskList"><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="8ddf5da3-8dca-4f94-8907-6ca78e8dd807"><title>11</title><description>desc1</description><contacts>cont1</contacts><notifyDate>2015.02.21 23:48:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="550d97b4-8c87-4893-ae5d-4e9a080e4f2e"><title>22</title><description>опис2</description><contacts>конт2</contacts><notifyDate>2015.02.21 23:48:09</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="7f9b1bc4-536e-4eae-8093-5caffb7fbc0c"><title>33</title><description/><contacts/><notifyDate>2015.02.21 23:49:23</notifyDate></task><task class="ua.chernov.taskmanager.impl.ScheduledTask" id="94077895-221c-425e-9c03-ff7966d80d17"><title>44</title><description>рмрпмпр</description><contacts>олш</contacts><notifyDate>2015.02.21 23:49:28</notifyDate></task></taskList></SendTaskList>
+2015-02-21 23:47:19,475 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node SendTaskList
+2015-02-21 23:47:19,475 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:19,475 INFO  [Thread-1] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:47:19,477 INFO  [Thread-1] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$SendTaskList
+2015-02-21 23:47:19,477 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent ua.chernov.taskmanager.transport.Packets$SendTaskList@439e91fe
+2015-02-21 23:47:19,477 INFO  [Thread-1] client.TaskController (TaskController.java:73) - receiveTaskList
+2015-02-21 23:47:22,752 INFO  [AWT-EventQueue-0] client.TaskController (TaskController.java:158) - actionPerformed close
+2015-02-21 23:47:23,511 INFO  [Thread-1] transport.ClientTransport (ClientTransport.java:40) - dispatchEvent 
+2015-02-21 23:47:23,516 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Part/>
+2015-02-21 23:47:23,518 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:47:23,524 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Part/>
+2015-02-21 23:47:23,525 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Part
+2015-02-21 23:47:23,525 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:23,526 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:47:23,527 INFO  [Thread-3] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Part
+2015-02-21 23:47:23,528 INFO  [Thread-3] transport.ServerTransport (ServerTransport.java:51) - dispatchEvent ua.chernov.taskmanager.transport.Packets$Part@40e09d8b
+2015-02-21 23:47:23,529 INFO  [Thread-3] impl.SimpleManager (SimpleManager.java:41) - Remove subscriber. Subscribers.size=0
+2015-02-21 23:47:23,532 INFO  [Thread-3] transport.PacketTransporterXML (PacketTransporterXML.java:85) - send XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:47:23,533 INFO  [Thread-3] transport.Transport (Transport.java:86) - send class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:47:23,535 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:108) - receive XMLPacket 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Ok/>
+2015-02-21 23:47:23,536 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:116) - XMLPacket root node Ok
+2015-02-21 23:47:23,536 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:118) - XMLPacket expected class ua.chernov.taskmanager.transport.Packets$Register
+2015-02-21 23:47:23,537 INFO  [AWT-EventQueue-0] transport.PacketTransporterXML (PacketTransporterXML.java:124) - XMLPacket class ua.chernov.taskmanager.transport.Packets$Ok
+2015-02-21 23:47:23,537 INFO  [AWT-EventQueue-0] transport.Transport (Transport.java:102) - receive class ua.chernov.taskmanager.transport.Packets$Ok

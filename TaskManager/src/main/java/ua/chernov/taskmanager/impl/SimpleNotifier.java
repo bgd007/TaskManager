@@ -12,7 +12,7 @@ import ua.chernov.taskmanager.Notifier;
 import ua.chernov.taskmanager.Task;
 
 public class SimpleNotifier implements Notifier {
-	final static private long SLEEP_INTERVAL = 2000000;
+	final static private long SLEEP_INTERVAL = 20000;
 	Manager manager;
 	Date prevTimeNotifyLoop = new Date();
 

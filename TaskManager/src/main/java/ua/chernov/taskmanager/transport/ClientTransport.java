@@ -69,7 +69,7 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveNotify(packet.task);
 		}
 
-		if (event.equals(Packets.NOTIFY_LATER_OK)) { 
+		if (event instanceof Packets.NotifyLaterOk) { 
 			subscriber.receiveNotifyLaterOk();
 		}
 
