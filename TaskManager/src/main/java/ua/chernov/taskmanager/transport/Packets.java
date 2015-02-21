@@ -121,7 +121,7 @@ public interface Packets {
 	}
 
 	@XmlRootElement
-	class SendTaskById implements Serializable {
+	class SendTaskById extends Packet {
 		Task task;
 		Object cardState;
 
@@ -130,14 +130,61 @@ public interface Packets {
 			setCardState(cardState);
 		}
 
-		@XmlElement
 		void setTask(Task task) {
 			this.task = task;
 		}
 
-		@XmlElement
 		void setCardState(Object cardState) {
 			this.cardState = cardState;
+		}
+
+		public static SendTaskById fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			String rootName = SendTaskById.class.getSimpleName();
+			Node root = XmlHelper.getNode(rootName, doc.getChildNodes());
+
+			Element task = (Element) XmlHelper.getNode("task", root);
+			UUID id = UUID.fromString(task.getAttribute("id"));
+
+			String title = XmlHelper.getNodeValue(XmlHelper.getNode("title",
+					task));
+
+			String description = XmlHelper.getNodeValue(XmlHelper.getNode(
+					"description", task));
+
+			String contacts = XmlHelper.getNodeValue(XmlHelper.getNode(
+					"contacts", task));
+
+			String notifyDateText = XmlHelper.getNodeValue(XmlHelper.getNode(
+					"notifyDate", task));
+			Date notifyDate = null;
+			if (!notifyDateText.equals("")) {
+				notifyDate = 
+			}
+
+			Node nodeDe = XmlHelper.getNode("title", task);
+			String title = XmlHelper.getNodeValue(nodeTitle);
+
+			Node nodeNick = nodePacket.getFirstChild();
+			String nodeValue = XmlHelper.getNodeValue(nodeNick);
+
+			Register result = new Register(nodeValue);
+			return result;
+		}
+
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = SendTaskById.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+
+			root.appendChild(task.toXML(doc));
+
+			root.appendChild(ITaskView.CardState.toXML(
+					(ITaskView.CardState) cardState, doc));
+
+			return doc;
 		}
 
 	}
@@ -183,12 +230,18 @@ public interface Packets {
 		public static GetTaskById fromXML(org.w3c.dom.Document doc)
 				throws Exception {
 			Node nodePacket = doc.getChildNodes().item(0);
-			Node nodeId = XmlHelper.getNode("id", nodePacket.getChildNodes());
 
+			Node nodeId = XmlHelper.getNode("id", nodePacket.getChildNodes());
 			String nodeValue = XmlHelper.getNodeValue(nodeId);
 			UUID id = UUID.fromString(nodeValue);
 
-			GetTaskById result = new GetTaskById(id, ITaskView.CardState.EDIT);
+			Node nodeCardState = XmlHelper.getNode("cardState",
+					nodePacket.getChildNodes());
+			nodeValue = XmlHelper.getNodeValue(nodeCardState);
+			ITaskView.CardState cardState = ITaskView.CardState
+					.fromString(nodeValue);
+
+			GetTaskById result = new GetTaskById(id, cardState);
 			return result;
 		}
 
@@ -203,10 +256,8 @@ public interface Packets {
 			nodeId.appendChild(doc.createTextNode(id.toString()));
 			root.appendChild(nodeId);
 
-			org.w3c.dom.Element nodeCardState = doc.createElement("cardState");
-			ITaskView.CardState state = (ITaskView.CardState) cardState;
-			String nodeValue = ITaskView.CardState.token(state);
-			nodeCardState.appendChild(doc.createTextNode(nodeValue));
+			Node nodeCardState = ITaskView.CardState.toXML(
+					(ITaskView.CardState) cardState, doc);
 			root.appendChild(nodeCardState);
 
 			return doc;

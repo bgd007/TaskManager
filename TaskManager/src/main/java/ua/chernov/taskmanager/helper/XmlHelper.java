@@ -17,6 +17,9 @@ import org.w3c.dom.NodeList;
 
 public class XmlHelper {
 
+	public static Node getNode(String tagName, Node parentNode) {
+		return getNode(tagName, parentNode.getChildNodes());
+	}
 	public static Node getNode(String tagName, NodeList nodes) {
 		for (int x = 0; x < nodes.getLength(); x++) {
 			Node node = nodes.item(x);

@@ -105,6 +105,8 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 			}
 		} catch (RuntimeException e) {
 			// on error send it as packet
+			log.error(e);
+//			log.error("UncaughtExceptionHandler error", e);
 			send(e);
 		}
 	}

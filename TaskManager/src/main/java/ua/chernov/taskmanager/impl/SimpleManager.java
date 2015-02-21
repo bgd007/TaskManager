@@ -147,6 +147,7 @@ public class SimpleManager implements Manager {
 
 	@Override
 	public void sendXML() {
+		
 	}
 
 }

@@ -5,7 +5,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
 import ua.chernov.taskmanager.Task;
+import ua.chernov.taskmanager.helper.DateHelper;
  
 @SuppressWarnings("serial")
 public class ScheduledTask implements Task, Serializable, Cloneable {
@@ -38,7 +43,7 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 	public void setTitle(String title) {
 		if ((title == null) || (title.equals("")))
 			throw new IllegalArgumentException(
-					"РќР°Р·РІР°РЅРёРµ Р·Р°РґР°С‡Рё РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј.");
+					"Title must be not empty.");
 
 		this.title = title;
 	}
@@ -75,9 +80,7 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 
 	@Override
 	public String toString() {
-		SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
-
-		String textNotifyDate = (notifyDate != null) ? df.format(notifyDate)
+		String textNotifyDate = (notifyDate != null) ? DateHelper.formatDate(notifyDate)
 				: "";
 
 		StringBuffer str = new StringBuffer("title="
@@ -106,6 +109,33 @@ public class ScheduledTask implements Task, Serializable, Cloneable {
 	@Override
 	public Task getClone() {
 		return this.clone();
+	}
+
+	@Override
+	public Node toXML(Document doc) {
+		Element nodeTask = doc.createElement("task");
+		nodeTask.setAttribute("id", id.toString());
+		
+		org.w3c.dom.Element nodeTitle = doc.createElement("title");
+		nodeTitle.appendChild(doc.createTextNode(title));
+		nodeTask.appendChild(nodeTitle);
+
+		org.w3c.dom.Element nodeDescription = doc.createElement("description");
+		nodeDescription.appendChild(doc.createTextNode(description));
+		nodeTask.appendChild(nodeDescription);
+		
+		org.w3c.dom.Element nodeContacts = doc.createElement("contacts");
+		nodeContacts.appendChild(doc.createTextNode(contacts));
+		nodeTask.appendChild(nodeContacts);
+
+		SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
+		String textNotifyDate = (notifyDate != null) ? df.format(notifyDate)
+				: "";
+		org.w3c.dom.Element nodeNotifyDate = doc.createElement("notifyDate");
+		nodeNotifyDate.appendChild(doc.createTextNode(textNotifyDate));
+		nodeTask.appendChild(nodeNotifyDate);
+		
+		return nodeTask;
 	}
 
 }

@@ -4,7 +4,7 @@ import java.util.Date;
 
 
 public interface Task {
-	public static final String DATE_FORMAT = "yyyy.MM.dd HH:mm:ss";
+//	public static final String DATE_FORMAT = "yyyy.MM.dd HH:mm:ss";
 	
 	public Object getId();
 
@@ -25,4 +25,6 @@ public interface Task {
 	public void setContacts(String Contacts);	
 	
 	public Task getClone();
+	
+	public org.w3c.dom.Node toXML(org.w3c.dom.Document doc); 
 }

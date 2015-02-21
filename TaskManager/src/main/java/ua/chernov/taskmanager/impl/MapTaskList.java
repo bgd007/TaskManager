@@ -63,6 +63,12 @@ public class MapTaskList extends TaskList implements Cloneable, Serializable,
 
 	@Override
 	public Task getTaskById(Object id) {
+		Task task = mapTasks.get(id);
+		if (task == null) {
+			String idStr = (id != null) ? id.toString() : "";
+			throw new RuntimeException("Task not found by id " + idStr + ".");
+		}
+		
 		return mapTasks.get(id);
 	}
 
@@ -108,10 +114,9 @@ public class MapTaskList extends TaskList implements Cloneable, Serializable,
 				ObjectOutputStream oos = new ObjectOutputStream(fos);) {
 			oos.writeObject(mapTasks);
 			oos.flush();
-/*			
-			oos.close();
-			fos.close();
-*/			
+			/*
+			 * oos.close(); fos.close();
+			 */
 		} catch (IOException e) {
 			throw new RuntimeException("Error storing TaskList to file.", e);
 		}
