@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager.client;
+package ua.chernov.taskmanager.client;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -65,13 +65,6 @@ public class TaskView extends GuiView implements ITaskView {
 				update(null);
 			}
 		});
-
-		// super(); //super РІС‹Р·С‹РІР°РµС‚ createframe, РєРѕС‚РѕСЂС‹
-		// РІС‹Р·С‹РІР°РµС‚ new
-		// JDialog(parentView.getFrame(), "Р—Р°РґР°С‡Р°", true);,
-		// Р° parentView РµС‰Рµ СЂР°РІРЅРѕ null
-
-		// createFrame();
 	}
 
 	protected void createFrame() {

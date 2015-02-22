@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager.transport;
+package ua.chernov.taskmanager.transport;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -67,6 +67,9 @@ public abstract class Transport {
 		}
 	}
 
+	/**
+	 * shutdown transport
+	 */
 	public void shutdown() {
 		try {
 			close();

@@ -1,4 +1,3 @@
-1
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -17,7 +16,7 @@
 [INFO] skip non existing resourceDirectory J:\java.course.dev\projects\TaskManager\TaskManager\src\test\resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:2.0.2:testCompile (default-testCompile) @ TaskManager ---
-[INFO] Nothing to compile - all classes are up to date
+[INFO] Compiling 1 source file to J:\java.course.dev\projects\TaskManager\TaskManager\target\test-classes
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ TaskManager ---
 [INFO] Surefire report directory: J:\java.course.dev\projects\TaskManager\TaskManager\target\surefire-reports
@@ -26,7 +25,7 @@
  T E S T S
 -------------------------------------------------------
 Running ua.chernov.taskmanager.AppTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 
 Results :
 
@@ -34,10 +33,11 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] 
 [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ TaskManager ---
+[INFO] Building jar: J:\java.course.dev\projects\TaskManager\TaskManager\target\TaskManager-1.0.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 2.403 s
-[INFO] Finished at: 2015-02-20T08:12:27+02:00
-[INFO] Final Memory: 10M/219M
+[INFO] Total time: 5.509 s
+[INFO] Finished at: 2015-02-22T14:02:42+02:00
+[INFO] Final Memory: 14M/183M
 [INFO] ------------------------------------------------------------------------

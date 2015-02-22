@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager;
+package ua.chernov.taskmanager;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

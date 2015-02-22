@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager.client;
+package ua.chernov.taskmanager.client;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

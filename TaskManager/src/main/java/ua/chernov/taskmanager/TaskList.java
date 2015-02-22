@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager;
+package ua.chernov.taskmanager;
 
 import java.util.Date;
 import java.util.SortedMap;

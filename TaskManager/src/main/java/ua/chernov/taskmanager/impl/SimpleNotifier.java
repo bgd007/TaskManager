@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager.impl;
+package ua.chernov.taskmanager.impl;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

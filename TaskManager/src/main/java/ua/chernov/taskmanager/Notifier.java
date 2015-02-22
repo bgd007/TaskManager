@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager;
+package ua.chernov.taskmanager;
 
 
 public interface Notifier {

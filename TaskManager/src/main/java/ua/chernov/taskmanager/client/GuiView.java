@@ -1,4 +1,4 @@
-﻿package ua.chernov.taskmanager.client;
+package ua.chernov.taskmanager.client;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
