@@ -1,0 +1,3 @@
+java -ea -Dfile.encoding=cp866 ^
+-cp .\target\classes;.\target\lib\log4j-api-2.1.jar;.\target\lib\log4j-core-2.1.jar ^
+ua.chernov.taskmanager.client.TaskController localhost
