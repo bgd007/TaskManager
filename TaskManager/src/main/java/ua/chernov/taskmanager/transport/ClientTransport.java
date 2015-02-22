@@ -73,6 +73,12 @@ public class ClientTransport extends Transport implements Manager {
 			subscriber.receiveNotifyLaterOk();
 		}
 
+		if (event instanceof Packets.ExceptionPacket) {
+			Packets.ExceptionPacket packet = (Packets.ExceptionPacket) event;
+			log.error(packet.message);
+			//throw new RuntimeException(packet.message);
+			subscriber.receiveException(packet.message);
+		}
 	}
 
 	/*

@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
 import javax.swing.JOptionPane;
 
@@ -131,6 +130,14 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 		}
 	}
 
+	@Override
+	public void receiveException(String message) {
+		log.error(message);
+		JOptionPane.showMessageDialog(null, message, "Error from server",
+				JOptionPane.ERROR_MESSAGE);
+	}
+
+	
 	public void createTaskListView() {
 		taskListView = new TaskListView();
 		views.add((GuiView) taskListView);
@@ -253,18 +260,18 @@ public class TaskController implements Manager.Subscriber, ActionListener {
 				JOptionPane.showMessageDialog(null, e.getMessage(), "Warning",
 						JOptionPane.WARNING_MESSAGE);
 				return;
-				// ClientExceptionHandler.showException(e);
 			}
 
 			model.notifyLater(this, taskId, notifyLaterDate);
 		}
 
-		if (event.getActionCommand().equals(ITaskListView.ACTION_SENDXML)) {
-			UUID id = UUID.fromString("550d97b4-8c87-4893-ae5d-4e9a080e4f2e");
-
-			model.getTaskById(this, id, CardState.EDIT);
-		}
+//		if (event.getActionCommand().equals(ITaskListView.ACTION_SENDXML)) {
+//			UUID id = UUID.fromString("550d97b4-8c87-4893-ae5d-4e9a080e4f2e");
+//			model.getTaskById(this, id, CardState.EDIT);
+//		}
 
 	}
+
+
 
 }

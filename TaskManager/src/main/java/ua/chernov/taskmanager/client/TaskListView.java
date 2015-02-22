@@ -95,7 +95,7 @@ public class TaskListView extends GuiView implements ITaskListView {
 		panelAction.setName("Panel");
 		panelAction.setBackground(Color.GRAY);
 
-		JPanel panelActionGrid = new JPanel(new GridLayout(1, 6, 5, 0));
+		JPanel panelActionGrid = new JPanel(new GridLayout(1, 5, 5, 0));
 		JButton btTest = new JButton("Test");
 		btTest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -142,7 +142,7 @@ public class TaskListView extends GuiView implements ITaskListView {
 			}
 		});
 
-		panelActionGrid.add(btTest);
+		//panelActionGrid.add(btTest);
 		panelActionGrid.add(btGetTaskList);
 		panelActionGrid.add(btAddTask);
 		panelActionGrid.add(btEditTask);
@@ -246,7 +246,7 @@ public class TaskListView extends GuiView implements ITaskListView {
 //			throw new RuntimeException(e);
 //		}
 //
-		fireAction(ACTION_SENDXML);
+		//fireAction(ACTION_SENDXML);
 		// new Packets.SendTaskById(task, cardState);
 
 		// BookType bt = new BookType();

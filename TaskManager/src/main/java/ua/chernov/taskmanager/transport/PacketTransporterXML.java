@@ -94,13 +94,13 @@ public class PacketTransporterXML implements PacketTransporter {
 
 		Object result = null;
 		try {
+			input.recive();
+
 			DocumentBuilderFactory docBuilderFact = DocumentBuilderFactory
 					.newInstance();
 			DocumentBuilder docBuilder;
 
 			docBuilder = docBuilderFact.newDocumentBuilder();
-
-			input.recive();
 
 			Document doc;
 			doc = docBuilder.parse(input);

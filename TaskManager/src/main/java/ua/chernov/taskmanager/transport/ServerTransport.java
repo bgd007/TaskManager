@@ -52,8 +52,9 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 
 		Manager.Subscriber thisSubscriber = ServerTransport.this;
 
-		if (event == null) return; 
-			
+		if (event == null)
+			return;
+
 		try {
 			if (event instanceof Packets.Register) {
 				Register reg = (Register) event;
@@ -106,8 +107,8 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 		} catch (RuntimeException e) {
 			// on error send it as packet
 			log.error(e);
-//			log.error("UncaughtExceptionHandler error", e);
-			send(e);
+			//send(e);
+			send(new Packets.ExceptionPacket(e));
 		}
 	}
 
@@ -125,18 +126,18 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 	@Override
 	public void receiveTaskById(Task task, Object cardState) {
 		Packets.SendTaskById packet = new Packets.SendTaskById(task, cardState);
-//		try {
-//			File file = new File("book.xml");
-//			JAXBContext context = JAXBContext
-//					.newInstance(Packets.SendTaskById.class);
-//			Marshaller marshaller = context.createMarshaller();
-//
-//			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-//
-//			marshaller.marshal(packet, file);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		// try {
+		// File file = new File("book.xml");
+		// JAXBContext context = JAXBContext
+		// .newInstance(Packets.SendTaskById.class);
+		// Marshaller marshaller = context.createMarshaller();
+		//
+		// marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		//
+		// marshaller.marshal(packet, file);
+		// } catch (Exception e) {
+		// e.printStackTrace();
+		// }
 
 		send(packet);
 		log.info("send Packets.SendTaskById");
@@ -173,6 +174,11 @@ public class ServerTransport extends Transport implements Manager.Subscriber {
 	public void receiveNewTask(Task task) {
 		send(new Packets.SendNewTask(task));
 		log.info("send Packets.SendNewTask");
+	}
+
+	@Override
+	public void receiveException(String message) {
+		log.error(message);		
 	}
 
 }

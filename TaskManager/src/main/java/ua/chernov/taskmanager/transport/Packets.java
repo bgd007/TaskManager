@@ -16,6 +16,7 @@ import ua.chernov.taskmanager.Task;
 import ua.chernov.taskmanager.TaskList;
 import ua.chernov.taskmanager.client.ITaskView;
 import ua.chernov.taskmanager.helper.DateHelper;
+import ua.chernov.taskmanager.helper.ExceptionHelper;
 import ua.chernov.taskmanager.helper.XmlHelper;
 
 /**
@@ -478,22 +479,51 @@ public interface Packets {
 
 	NotifyLaterOk notifyLaterOk = new NotifyLaterOk();
 
-//	/**
-//	 * Server -> Client: some user joined event
-//	 */
-//	class Join implements Serializable {
-//		String nick;
-//
-//		public Join(String nick) {
-//			this.nick = nick;
-//		}
-//	}
-
 	/**
 	 * Server -> Client: some user parted event Client -> Server: current user
 	 * parted
 	 */
 	class Part extends Packet {
+	}
+
+	class ExceptionPacket extends Packet {
+		String message;
+
+		public ExceptionPacket(Exception e) {
+			this.message = ExceptionHelper.getLastNotNullMessage(e);
+		}
+		
+		public ExceptionPacket(String message) {
+			this.message = message;
+		}
+
+		
+		public org.w3c.dom.Document toXML() throws ParserConfigurationException {
+			String rootName = ExceptionPacket.class.getSimpleName();
+			org.w3c.dom.Document doc = createPacketDocument(rootName);
+
+			org.w3c.dom.Node root = XmlHelper.getNode(rootName,
+					doc.getChildNodes());
+
+			org.w3c.dom.Element nodeMessage = doc.createElement("message");
+			nodeMessage.appendChild(doc.createTextNode(message));
+			root.appendChild(nodeMessage);
+
+			return doc;
+		}
+
+		public static ExceptionPacket fromXML(org.w3c.dom.Document doc)
+				throws Exception {
+			Node nodePacket = doc.getChildNodes().item(0);
+
+			Node nodeMessage = XmlHelper.getNode("message",
+					nodePacket.getChildNodes());
+			String message = XmlHelper.getNodeValue(nodeMessage);
+			
+			ExceptionPacket result = new ExceptionPacket(message);
+			return result;
+		}
+
 	}
 
 }

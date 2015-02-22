@@ -54,6 +54,8 @@ public interface Manager {
 		void receiveNotify(Task task);
 
 		void receiveNotifyLaterOk();
+		
+		void receiveException(String message);
 	}
 
 	/**
